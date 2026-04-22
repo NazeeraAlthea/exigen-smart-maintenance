@@ -4,9 +4,9 @@ name: CI - Code Testing
 # Trigger: Jalan setiap kali ada push atau pull request ke branch main
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "development" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "development", "main" ]
 
 jobs:
   test-code:
