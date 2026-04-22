@@ -1,0 +1,31 @@
+# File: .github/workflows/code_testing.yml
+name: CI - Code Testing
+
+# Trigger: Jalan setiap kali ada push atau pull request ke branch main
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test-code:
+    runs-on: ubuntu-latest # Robotnya pakai OS Linux
+    
+    steps:
+    - name: Mengambil kode dari repository
+      uses: actions/checkout@v3
+      
+    - name: Menyiapkan Python 3.11.9
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.11.9"
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    # Kalau nanti kamu punya script test, bisa ditambah di sini
+    # - name: Jalankan Unit Test
+    #   run: pytest
