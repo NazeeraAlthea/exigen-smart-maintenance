@@ -48,3 +48,619 @@ Mesin injeksi sering error dan tidak responsif,"Sensor optik sudah tidak respons
 Bagian heater mesin laminasi terlalu panas dan tidak stabil suhunya,"Sensor suhu heater error, sudah diganti dan dikalibrasi ulang sistem kontrolnya",Mesin Produksi,Tinggi,Overheat,Kalibrasi
 "MCB pompa sering trip tanpa sebab jelas, bau hangus","Modul kontrol pompa rusak akibat konsleting, sudah diganti dengan yang baru",Pompa Air,Tinggi,Konsleting,Penggantian Part
 Ada suara decitan dari mesin press hidrolik saat beroperasi,"Seal hidrolik bocor, menyebabkan suara decitan, sudah diganti dengan seal baru",Mesin Produksi,Sedang,Keausan,Penggantian Part
+"Pompa air di area produksi 1 suaranya kasar banget, kayak mau pecah","Bearing motor pompa aus, sudah diganti dengan yang baru dan dilumasi",Pompa Air,Tinggi,Keausan,Penggantian Part
+Lampu penerangan di gudang material sering mati sendiri lalu nyala lagi,"Ada koneksi longgar pada fitting lampu, sudah dikencangkan dan dicek ulang",Kelistrikan,Rendah,Konsleting,Perbaikan Jaringan
+Mesin cetak nomor 3 kok hasil produksinya miring terus ya,"Sensor posisi plat cetak tidak presisi, sudah dikalibrasi ulang",Mesin Produksi,Sedang,Keausan,Kalibrasi
+"Ventilasi udara di ruang cat tidak berfungsi, panas banget di dalam","Motor blower ventilasi mengalami overheat akibat penggunaan berlebihan, pendinginan dilakukan",HVAC,Tinggi,Overheat,Penggantian Part
+Air dari keran di toilet karyawan kecil sekali tekanannya,"Filter inlet pompa air kotor dan tersumbat, sudah dibersihkan",Pompa Air,Rendah,Tersumbat,Pembersihan
+Colokan listrik di bengkel sering muncul percikan api pas dipakai,"Ada konsleting kecil di stop kontak karena kabel terkelupas, sudah diganti",Kelistrikan,Tinggi,Konsleting,Perbaikan Jaringan
+Mesin pengemas selalu berhenti mendadak setelah beberapa menit beroperasi,"Salah satu relay kontrol sudah melewati usia pakainya, diganti baru",Mesin Produksi,Sedang,Usia Pakai,Penggantian Part
+"AC di kantor administrasi tidak dingin sama sekali, cuma keluar angin doang","Kompresor AC sudah aus dan tidak mampu memompa freon, perlu penggantian",HVAC,Tinggi,Keausan,Penggantian Part
+Pompa sirkulasi air pendingin berisik dan airnya tidak mengalir lancar,"Impeller pompa sudah terkikis dan tidak efektif, diganti baru",Pompa Air,Tinggi,Keausan,Penggantian Part
+MCB di panel utama area gudang sering trip tanpa alasan jelas,"Terdeteksi adanya beban berlebih pada sirkuit tersebut, perlu perbaikan jaringan distribusi",Kelistrikan,Sedang,Konsleting,Perbaikan Jaringan
+"Mesin press hidrolik tekanan tidak stabil, produk jadi cacat semua","Sistem hidrolik kurang pelumasan pada valve-nya, sudah dilumasi",Mesin Produksi,Sedang,Keausan,Pelumasan
+"AC di ruang kontrol baunya apek, kayak ada tikus mati","Filter AC kotor sekali dan ada penumpukan debu, sudah dibersihkan dan disanitasi",HVAC,Rendah,Tersumbat,Pembersihan
+"Aliran air ke mesin pendingin jadi lemah banget, padahal pompa nyala","Ada penyumbatan di pipa supply air, sudah dilakukan pembersihan",Pompa Air,Sedang,Tersumbat,Pembersihan
+Ada bau gosong dari panel listrik dekat area loading dock,"Kabel utama menuju panel sudah tua dan terkelupas, menyebabkan konsleting",Kelistrikan,Tinggi,Konsleting,Penggantian Part
+"Mesin pengering hasil akhirnya tidak kering sempurna, waktunya sudah sesuai","Elemen pemanas mesin pengering sudah aus dan tidak efisien, diganti baru",Mesin Produksi,Sedang,Keausan,Penggantian Part
+"Suhu ruangan server naik terus, AC-nya kayak nggak nendang","Unit outdoor AC mengalami overheat karena kipasnya macet, sudah diperbaiki",HVAC,Tinggi,Overheat,Perbaikan Jaringan
+"Pompa pembuangan limbah mampet lagi, airnya meluber","Tersumbat oleh endapan lumpur dan sampah padat, sudah dibersihkan",Pompa Air,Tinggi,Tersumbat,Pembersihan
+Listrik di area istirahat sering padam kalau banyak alat dinyalakan,"Kapasitas kabel jaringan tidak memadai untuk beban, perlu perbaikan jaringan",Kelistrikan,Sedang,Usia Pakai,Perbaikan Jaringan
+Mesin packaging sering macet di bagian conveyor belt-nya,Belt conveyor sudah aus dan perlu penggantian,Mesin Produksi,Sedang,Keausan,Penggantian Part
+"AC di area produksi berisik sekali suaranya, getarannya kuat",Motor fan indoor AC sudah mulai aus dan perlu pelumasan,HVAC,Rendah,Keausan,Pelumasan
+"Indikator tekanan pompa tidak bergerak, tapi pompa tetap beroperasi","Sensor tekanan pada pompa air sudah tua dan tidak akurat, perlu kalibrasi",Pompa Air,Rendah,Usia Pakai,Kalibrasi
+"Ada kabel terkelupas di dekat mesin pengelasan, bahaya ini!","Kabel power mesin pengelasan sudah aus dan terkelupas, sudah diganti baru",Kelistrikan,Tinggi,Keausan,Penggantian Part
+Mesin CNC hasil potongannya tidak presisi sama sekali,Kalibrasi ulang sumbu X dan Y pada mesin CNC sudah dilakukan,Mesin Produksi,Tinggi,Keausan,Kalibrasi
+"AC di ruang rapat tidak bisa diatur suhunya, remote tidak berfungsi","Modul kontrol AC sudah rusak karena usia pakai, sudah diganti",HVAC,Sedang,Usia Pakai,Penggantian Part
+"Pompa dosing kimia sering error, dosisnya tidak konsisten","Piston pompa dosing sudah aus dan tidak akurat, diganti baru",Pompa Air,Sedang,Keausan,Penggantian Part
+Outlet listrik di dapur pabrik tidak ada power sama sekali,"Ada konsleting pada sirkuit cabang, sudah diperbaiki dan diperiksa",Kelistrikan,Rendah,Konsleting,Perbaikan Jaringan
+Mesin mixing sering overheat dan mati otomatis,"Motor penggerak mixer kurang pelumasan pada bearing-nya, sudah dilumasi",Mesin Produksi,Tinggi,Overheat,Pelumasan
+"AC di pos satpam kurang dingin, padahal sudah disetel paling rendah","Freon AC berkurang dan kondensor kotor, sudah diisi ulang dan dibersihkan",HVAC,Rendah,Usia Pakai,Pembersihan
+Pompa air bersih di tandon atas mati total,"Motor pompa mengalami overheat karena bekerja terlalu keras, telah diperbaiki",Pompa Air,Tinggi,Overheat,Penggantian Part
+Panel listrik utama panas sekali saat disentuh,"Koneksi terminal di panel longgar, menyebabkan resistansi dan overheat, sudah diperbaiki",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+"Mesin wrapping sering merusak kemasan, tidak rapi","Pengaturan tegangan pada mesin wrapping tidak tepat, sudah dikalibrasi ulang",Mesin Produksi,Sedang,Keausan,Kalibrasi
+"AC di kantin sering mati sendiri, lalu nyala lagi","Sensor suhu AC kotor dan tidak akurat, sudah dibersihkan dan dicek",HVAC,Rendah,Tersumbat,Pembersihan
+Tekanan air untuk pemadam kebakaran menurun drastis,"Pipa hisap pompa pemadam kebakaran tersumbat sedimen, sudah dibersihkan",Pompa Air,Tinggi,Tersumbat,Pembersihan
+Lampu darurat di koridor tidak menyala saat listrik padam,"Baterai cadangan lampu darurat sudah melewati usia pakainya, diganti baru",Kelistrikan,Rendah,Usia Pakai,Penggantian Part
+"Mesin pengisi botol sering tumpah-tumpah, tidak akurat volumenya","Nozzle pengisi sudah aus dan tidak rapat, diganti baru",Mesin Produksi,Sedang,Keausan,Penggantian Part
+"Udara di ruang produksi terasa pengap, exhaust fan tidak berfungsi","Motor exhaust fan overheat karena debu menumpuk, sudah dibersihkan",HVAC,Sedang,Overheat,Pembersihan
+Pompa pendingin mesin produksi suaranya aneh dan kurang kencang,"Bearing motor pompa sudah aus, perlu pelumasan dan penggantian jika parah",Pompa Air,Sedang,Keausan,Pelumasan
+Socket charger di area istirahat karyawan tidak berfungsi,"Terjadi konsleting internal pada socket, sudah diganti baru",Kelistrikan,Rendah,Konsleting,Perbaikan Jaringan
+"Mesin pengering sering bau hangus, padahal tidak ada yang terbakar","Elemen pemanas kotor dan menyebabkan overheat lokal, sudah dibersihkan",Mesin Produksi,Tinggi,Overheat,Pembersihan
+AC di laboratorium tidak bisa mencapai suhu yang diinginkan,"Unit AC sudah tua, efisiensinya menurun, perlu penggantian unit atau overhaul",HVAC,Sedang,Usia Pakai,Penggantian Part
+Pompa vakum di lab tidak menghasilkan vakum maksimal,"Seal pompa vakum sudah aus dan menyebabkan kebocoran, diganti baru",Pompa Air,Sedang,Keausan,Penggantian Part
+"Panel kontrol mesin injeksi mati total, tidak ada respon","Kabel power ke panel kontrol putus karena usia pakai, sudah diganti",Kelistrikan,Tinggi,Usia Pakai,Perbaikan Jaringan
+"Mesin bor otomatis sering macet, putarannya tidak stabil","Gearbox mesin bor kurang pelumasan, sudah dilumasi ulang",Mesin Produksi,Sedang,Keausan,Pelumasan
+AC di ruang tunggu berisik sekali dan ada getaran aneh,"Kipas outdoor AC aus, sudah diganti dan seimbang",HVAC,Rendah,Keausan,Penggantian Part
+Pompa sirkulasi air RO sering berhenti sendiri,"Sensor level air kotor dan tersumbat, sudah dibersihkan dan dikalibrasi",Pompa Air,Sedang,Tersumbat,Pembersihan
+Saklar lampu di gudang sering nyetrum kecil saat disentuh,"Ada konsleting minor di dalam saklar karena kelembaban, sudah diganti",Kelistrikan,Rendah,Konsleting,Penggantian Part
+"Mesin potong material tidak akurat lagi, ukurannya meleset","Blade mesin potong sudah aus, perlu penggantian dan kalibrasi",Mesin Produksi,Sedang,Keausan,Kalibrasi
+"Pipa air panas di kantin bocor kecil, netes terus","Pipa sudah berkarat dan aus, perlu penggantian segmen pipa",Pompa Air,Rendah,Usia Pakai,Penggantian Part
+Kabel power ke mesin pengemas terlihat meleleh sedikit,"Overload pada kabel akibat konsleting intermiten, sudah diganti dan jaringan diperiksa",Kelistrikan,Tinggi,Konsleting,Perbaikan Jaringan
+Pompa air utama mengeluarkan suara berisik dan kasar,"Bearing motor pompa aus dan berisik, sudah diganti part baru.",Pompa Air,Tinggi,Keausan,Penggantian Part
+Lampu di gudang mati total,"MCB di panel distribusi sudah habis usia pakainya, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+"Mesin pengemas macet, produk tidak bisa lewat","Saluran feed material mesin tersumbat residu, sudah dibersihkan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+AC di lab kimia tiba-tiba mati total dan ada bau gosong,"Terjadi hubungan arus pendek pada kabel power AC, sudah perbaikan jaringan kabel.",HVAC,Tinggi,Konsleting,Perbaikan Jaringan
+Motor pompa air utama sangat panas dan mati sendiri,"Motor pompa mengalami overheat karena beban berlebih, sudah diganti part.",Pompa Air,Tinggi,Overheat,Penggantian Part
+"Panel listrik utama sangat panas, ada bau gosong samar","Terminal konektor longgar menyebabkan overheat, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+"Mesin pabrik ini sudah sangat tua, sering rusak dan susah cari sparepart","Komponen utama mesin sudah habis masa pakainya, perlu penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+"AC di ruang direksi berisik banget suaranya, dinginnya juga kurang","Motor fan outdoor AC aus dan berisik, sudah dilakukan penggantian part baru.",HVAC,Sedang,Keausan,Penggantian Part
+"Tekanan air di lantai atas pabrik sangat lemah, air tidak sampai","Pipa isap pompa tersumbat kotoran, sudah dibersihkan.",Pompa Air,Rendah,Tersumbat,Pembersihan
+"Listrik di seluruh area produksi tiba-tiba mati total, ada bau hangus","Terjadi hubungan arus pendek pada jalur listrik di area produksi, sudah perbaikan jaringan kabel.",Kelistrikan,Tinggi,Konsleting,Perbaikan Jaringan
+Ada suara gesekan keras dari mesin conveyor,"Bearing pada shaft utama mesin aus, perlu penggantian part.",Mesin Produksi,Tinggi,Keausan,Penggantian Part
+Unit AC di server room mengeluarkan bau apek dan ada tetesan air,"Sistem drainase AC tersumbat, kotoran sudah dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air bocor terus dari sealnya,"Bearing motor pompa aus dan kering, sudah dilakukan pelumasan.",Pompa Air,Sedang,Keausan,Pelumasan
+"Debu tebal di panel listrik, takut konslet","Debu dan kotoran menumpuk di dalam panel distribusi, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+"Mesin pengaduk tiba-tiba mati total, ada bau gosong dari panelnya","Papan sirkuit kontrol PLC mesin terbakar akibat hubung singkat, sudah diganti part baru.",Mesin Produksi,Tinggi,Konsleting,Penggantian Part
+"AC di ruang rapat sudah tua, dinginnya tidak maksimal lagi","Unit kompresor AC sudah sangat tua, perlu penggantian part baru.",HVAC,Tinggi,Usia Pakai,Penggantian Part
+Pompa air sering trip karena panas berlebih,"Gulungan motor pompa terbakar karena panas, sudah diganti part baru.",Pompa Air,Tinggi,Overheat,Penggantian Part
+Kabel listrik di mesin A terasa panas saat disentuh,"Kabel utama panel listrik mengalami overheat karena beban berlebih, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+Performa mesin pengemas menurun drastis dalam beberapa tahun terakhir,"Komponen utama mesin sudah habis masa pakainya, perlu penggantian part.",Mesin Produksi,Sedang,Usia Pakai,Penggantian Part
+Air AC bocor di area kantor admin,"Saluran pembuangan unit AC mampet karena lumut dan debu, sudah disemprot dan dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+"Tekanan air pompa tidak stabil, sering naik turun","Impeller pompa aus, tidak mampu memompa air maksimal, sudah diganti part baru.",Pompa Air,Sedang,Keausan,Penggantian Part
+"MCB di panel utama sering trip, padahal tidak ada beban berlebih","MCB di panel distribusi sudah habis usia pakainya, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+"Saluran oli hidrolik tersumbat, tekanan menurun","Filter oli hidrolik mampet, sudah dilakukan pembersihan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+MCB AC di lantai 3 sering jatuh sendiri,"Kapasitor AC terbakar akibat konsleting, sudah diganti part baru.",HVAC,Tinggi,Konsleting,Penggantian Part
+"Pompa air tidak mau nyala, MCB utama jeglek","Terjadi konsleting pada kabel motor pompa, sudah perbaikan jaringan.",Pompa Air,Tinggi,Konsleting,Perbaikan Jaringan
+Stop kontak di ruang istirahat meleleh,"Komponen proteksi di panel listrik overheat dan rusak, sudah diganti part baru.",Kelistrikan,Tinggi,Overheat,Penggantian Part
+"Suhu mesin melebihi batas normal, sering mati sendiri","Motor mesin produksi mengalami overheat karena beban berlebih, sudah diganti part.",Mesin Produksi,Tinggi,Overheat,Penggantian Part
+AC mengeluarkan suara mendecit saat dinyalakan,"Kipas indoor AC mulai aus, sudah dilakukan penggantian part.",HVAC,Sedang,Keausan,Penggantian Part
+Pompa terasa getarannya tidak normal,"Kopling motor pompa aus, perlu penggantian part.",Pompa Air,Sedang,Keausan,Penggantian Part
+"Semua instalasi listrik di gudang sudah sangat tua, perlu peremajaan","Kabel instalasi listrik sudah tua dan rapuh, disarankan penggantian part.",Kelistrikan,Tinggi,Usia Pakai,Penggantian Part
+Belt penggerak mesin sering selip dan berisik,"Belt conveyor aus dan kendur, sudah diganti part baru.",Mesin Produksi,Sedang,Keausan,Penggantian Part
+"AC di ruang kontrol sering mati sendiri, padahal sudah diservis","Kompresor AC mengalami overheat, diduga karena sirkulasi freon kurang optimal, sudah dikalibrasi ulang.",HVAC,Tinggi,Overheat,Kalibrasi
+Pompa mengeluarkan bau gosong setelah dipakai lama,"Sensor suhu pompa memberikan bacaan tidak akurat, menyebabkan overheat proteksi, sudah dikalibrasi.",Pompa Air,Sedang,Overheat,Kalibrasi
+"Kotoran di dalam MCB, sering trip tidak jelas","Terminal konektor kotor dan berkarat, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+Motor mesin utama sangat panas dan ada bau aneh,"Motor mesin produksi mengalami overheat karena beban berlebih, sudah diganti part.",Mesin Produksi,Tinggi,Overheat,Penggantian Part
+AC sudah sering diservis tapi masalahnya muncul lagi,"Papan sirkuit kontrol AC sudah rapuh, perlu penggantian part.",HVAC,Sedang,Usia Pakai,Penggantian Part
+Air tidak keluar sama sekali,"Impeller pompa terhalang sampah, sudah dibersihkan.",Pompa Air,Sedang,Tersumbat,Pembersihan
+"Stop kontak di area packing longgar, sering mati sendiri","Terminal stop kontak aus, sudah diganti part baru.",Kelistrikan,Sedang,Keausan,Penggantian Part
+"Produk hasil cetakan tidak presisi, mungkin karena ada bagian mesin aus","Pisau pemotong mesin aus, sudah diganti part baru.",Mesin Produksi,Tinggi,Keausan,Penggantian Part
+Unit AC di server room mengeluarkan bau apek dan ada tetesan air,"Unit indoor AC tersumbat debu tebal, sudah dibersihkan menyeluruh.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air bocor terus dari sealnya,"Seal mekanis pompa bocor akibat keausan, perlu penggantian part.",Pompa Air,Tinggi,Keausan,Penggantian Part
+"Saluran ventilasi panel tertutup debu, panel panas","Ventilasi panel utama tersumbat debu tebal, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+"Mesin pengaduk tiba-tiba mati total, ada bau gosong dari panelnya","Relay proteksi mesin terbakar akibat konsleting, sudah diganti part baru.",Mesin Produksi,Tinggi,Konsleting,Penggantian Part
+Ada percikan api di sekitar kabel AC,"Terminal konektor AC meleleh karena konsleting, sudah diganti part baru.",HVAC,Tinggi,Konsleting,Penggantian Part
+Pompa air mati total dan tercium bau terbakar,"Papan sirkuit kontrol pompa terbakar akibat hubung singkat, sudah diganti part baru.",Pompa Air,Tinggi,Konsleting,Penggantian Part
+MCB di panel sering trip dan panas,"Kabel utama panel listrik mengalami overheat karena beban berlebih, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+"Mesin sudah beroperasi lebih dari 20 tahun, perlu peremajaan","Motor penggerak mesin sudah melewati usia pakai, sudah dilakukan penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+AC di gudang tidak dingin dan sering meneteskan air,"Filter AC kotor dan menghambat aliran udara, sudah dibersihkan dan diganti jika perlu.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air utama mengeluarkan suara berisik dan kasar,"Bearing motor pompa aus dan berisik, sudah diganti part baru.",Pompa Air,Tinggi,Keausan,Penggantian Part
+"Lampu di gudang sering kedap-kedip, mungkin saklarnya rusak","Kontaktor di panel utama aus, perlu penggantian part.",Kelistrikan,Sedang,Keausan,Penggantian Part
+Conveyor belt berhenti karena ada benda asing,"Saluran feed material mesin tersumbat residu, sudah dibersihkan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+"AC di ruang direksi berisik banget suaranya, dinginnya juga kurang","Motor fan outdoor AC aus dan berisik, sudah dilakukan penggantian part baru.",HVAC,Sedang,Keausan,Penggantian Part
+"Tekanan air di lantai atas pabrik sangat lemah, air tidak sampai","Pipa isap pompa tersumbat kotoran, sudah dibersihkan.",Pompa Air,Rendah,Tersumbat,Pembersihan
+"Listrik di seluruh area produksi tiba-tiba mati total, ada bau hangus","Kabel fasa ke netral konslet, menyebabkan MCB trip, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Konsleting,Perbaikan Jaringan
+Ada suara gesekan keras dari mesin conveyor,"Gearbox mesin mengalami keausan internal, sudah diganti part baru.",Mesin Produksi,Tinggi,Keausan,Penggantian Part
+Unit outdoor AC getarannya terlalu kuat dan dinginnya tidak maksimal,"Bearing kompresor aus, sudah diganti dengan bearing baru.",HVAC,Sedang,Keausan,Penggantian Part
+Pompa air hidup tapi air tidak keluar,"Filter inlet pompa mampet, sudah dilakukan pembersihan.",Pompa Air,Rendah,Tersumbat,Pembersihan
+Kontaktor panel listrik sering macet,"Kontaktor di panel utama aus, perlu penggantian part.",Kelistrikan,Sedang,Keausan,Penggantian Part
+"Produk hasil cetakan tidak presisi, mungkin karena ada bagian mesin aus","Bearing pada shaft utama mesin aus, perlu penggantian part.",Mesin Produksi,Tinggi,Keausan,Penggantian Part
+"AC hanya keluar angin panas, padahal sudah disetel dingin","Unit outdoor mengalami overheat karena debu tebal menghalangi sirkulasi udara, sudah dibersihkan.",HVAC,Sedang,Overheat,Pembersihan
+Pompa mengeluarkan bau gosong setelah dipakai lama,"Gulungan motor pompa terbakar karena panas, sudah diganti part baru.",Pompa Air,Tinggi,Overheat,Penggantian Part
+Ada bau gosong samar di panel listrik utama,"Busbar di panel utama overheat karena koneksi longgar, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+"Suhu mesin melebihi batas normal, sering mati sendiri","Sistem pendingin mesin tersumbat dan tidak efektif, sudah dibersihkan.",Mesin Produksi,Sedang,Overheat,Pembersihan
+Performa pendinginan AC menurun drastis dalam setahun terakhir,"Seluruh unit outdoor sudah melewati usia pakai ekonomis, sudah dilakukan penggantian part.",HVAC,Sedang,Usia Pakai,Penggantian Part
+"Performa pompa air menurun drastis, tidak lagi kuat menaikkan air","Unit pompa air sudah melewati batas usia ekonomis, sudah dilakukan penggantian part.",Pompa Air,Sedang,Usia Pakai,Penggantian Part
+Kabel-kabel di pabrik sudah kelihatan rapuh,"Kabel instalasi listrik sudah tua dan rapuh, disarankan penggantian part.",Kelistrikan,Tinggi,Usia Pakai,Penggantian Part
+Sering terjadi downtime karena komponen mesin sudah rapuh,"Sistem kontrol PLC mesin sudah usang, disarankan penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+"AC tidak mau nyala setelah listrik mati, ada bau hangus","Kapasitor AC terbakar akibat konsleting, sudah diganti part baru.",HVAC,Tinggi,Konsleting,Penggantian Part
+Listrik ke pompa tiba-tiba putus dan ada percikan,"Overload relay pompa terbakar akibat konsleting, sudah diganti part baru.",Pompa Air,Tinggi,Konsleting,Penggantian Part
+Stop kontak terbakar di ruang produksi,"Komponen elektronik di panel kontrol terbakar akibat konsleting, sudah diganti part baru.",Kelistrikan,Tinggi,Konsleting,Penggantian Part
+Motor mesin produksi mengeluarkan asap dan bau terbakar,"Terjadi konsleting pada sirkuit motor mesin, sudah perbaikan jaringan kabel.",Mesin Produksi,Tinggi,Konsleting,Perbaikan Jaringan
+Filter AC terlihat sangat kotor dan debunya tebal,"Filter AC kotor dan menghambat aliran udara, sudah dibersihkan dan diganti jika perlu.",HVAC,Rendah,Tersumbat,Pembersihan
+Pipa input pompa tersumbat kotoran,"Pipa isap pompa tersumbat kotoran, sudah dibersihkan.",Pompa Air,Rendah,Tersumbat,Pembersihan
+Terminal listrik terlihat kotor dan berkarat,"Terminal konektor kotor dan berkarat, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+Nozzle semprotan mesin tidak keluar cairan,"Nozzle semprotan mesin tersumbat, sudah dibersihkan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+"Fan AC tidak berputar kencang, hanya pelan","Kipas indoor AC mulai aus, sudah dilakukan penggantian part.",HVAC,Sedang,Keausan,Penggantian Part
+Sistem penggerak pompa terdengar bergesek,"Kopling motor pompa aus, perlu penggantian part.",Pompa Air,Sedang,Keausan,Penggantian Part
+Kabel di area produksi terlihat mengelupas dan usang,"Kabel instalasi listrik di area produksi mengalami keausan, sudah perbaikan jaringan.",Kelistrikan,Sedang,Keausan,Perbaikan Jaringan
+Komponen bergerak mesin terlihat oblak,"Bearing pada shaft utama mesin aus, perlu penggantian part.",Mesin Produksi,Sedang,Keausan,Penggantian Part
+Kompresor AC terasa sangat panas saat disentuh,"Kompresor AC mengalami overheat, diduga karena sirkulasi freon kurang optimal, sudah dikalibrasi ulang.",HVAC,Tinggi,Overheat,Kalibrasi
+Suara pompa terdengar aneh dan panas sekali,"Motor pompa mengalami overheat karena beban berlebih, sudah diganti part.",Pompa Air,Tinggi,Overheat,Penggantian Part
+Terdengar suara mendesis dari panel listrik yang panas,"Terminal konektor longgar menyebabkan overheat, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+Panel kontrol mesin terasa panas sekali,"Ventilasi kabinet kontrol mesin tersumbat, menyebabkan komponen overheat, sudah dibersihkan.",Mesin Produksi,Sedang,Overheat,Pembersihan
+AC sudah lebih dari 10 tahun dan sering rusak,"Papan sirkuit kontrol AC sudah rapuh, perlu penggantian part.",HVAC,Tinggi,Usia Pakai,Penggantian Part
+Pompa sering macet dan perlu di-trigger manual,"Sistem kontrol pompa sudah tua, perlu penggantian part.",Pompa Air,Sedang,Usia Pakai,Penggantian Part
+Panel kontrol terlihat kusam dan tombolnya sudah usang,"Panel kontrol utama sudah usang, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+Komponen elektronik di mesin sering gagal karena usia,"Sistem kontrol PLC mesin sudah usang, disarankan penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+Indikator listrik di AC mati dan tercium bau terbakar,"Terjadi hubungan arus pendek pada kabel power AC, sudah perbaikan jaringan kabel.",HVAC,Tinggi,Konsleting,Perbaikan Jaringan
+"Pompa air tidak mau nyala, MCB utama jeglek","Terjadi konsleting pada kabel motor pompa, sudah perbaikan jaringan.",Pompa Air,Tinggi,Konsleting,Perbaikan Jaringan
+Alarm kebakaran berbunyi karena ada asap dari panel listrik,"Isolasi kabel terkelupas menyebabkan konsleting, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Konsleting,Perbaikan Jaringan
+"Semua indikator di mesin mati total, ada bau aneh","Kabel sensor mesin mengalami konsleting, sudah perbaikan jaringan.",Mesin Produksi,Tinggi,Konsleting,Perbaikan Jaringan
+AC di ruang meeting lantai 2 netes air terus nih,"Saluran pembuangan unit AC mampet karena lumut dan debu, sudah disemprot dan dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air utama mengeluarkan suara berisik dan kasar,"Bearing motor pompa aus dan berisik, sudah diganti part baru.",Pompa Air,Tinggi,Keausan,Penggantian Part
+Lampu di gudang mati total,"MCB di panel distribusi sudah habis usia pakainya, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+"Mesin pengemas macet, produk tidak bisa lewat","Saluran feed material mesin tersumbat residu, sudah dibersihkan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+AC di lab kimia tiba-tiba mati total dan ada bau gosong,"Terjadi hubungan arus pendek pada kabel power AC, sudah perbaikan jaringan kabel.",HVAC,Tinggi,Konsleting,Perbaikan Jaringan
+Motor pompa air utama sangat panas dan mati sendiri,"Motor pompa mengalami overheat karena beban berlebih, sudah diganti part.",Pompa Air,Tinggi,Overheat,Penggantian Part
+"Panel listrik utama sangat panas, ada bau gosong samar","Terminal konektor longgar menyebabkan overheat, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+"Mesin pabrik ini sudah sangat tua, sering rusak dan susah cari sparepart","Komponen utama mesin sudah habis masa pakainya, perlu penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+"AC di ruang direksi berisik banget suaranya, dinginnya juga kurang","Motor fan outdoor AC aus dan berisik, sudah dilakukan penggantian part baru.",HVAC,Sedang,Keausan,Penggantian Part
+"Tekanan air di lantai atas pabrik sangat lemah, air tidak sampai","Pipa isap pompa tersumbat kotoran, sudah dibersihkan.",Pompa Air,Rendah,Tersumbat,Pembersihan
+"Listrik di seluruh area produksi tiba-tiba mati total, ada bau hangus","Terjadi hubungan arus pendek pada jalur listrik di area produksi, sudah perbaikan jaringan kabel.",Kelistrikan,Tinggi,Konsleting,Perbaikan Jaringan
+Ada suara gesekan keras dari mesin conveyor,"Bearing pada shaft utama mesin aus, perlu penggantian part.",Mesin Produksi,Tinggi,Keausan,Penggantian Part
+Unit AC di server room mengeluarkan bau apek dan ada tetesan air,"Sistem drainase AC tersumbat, kotoran sudah dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air bocor terus dari sealnya,"Bearing motor pompa aus dan kering, sudah dilakukan pelumasan.",Pompa Air,Sedang,Keausan,Pelumasan
+"Debu tebal di panel listrik, takut konslet","Debu dan kotoran menumpuk di dalam panel distribusi, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+"Mesin pengaduk tiba-tiba mati total, ada bau gosong dari panelnya","Papan sirkuit kontrol PLC mesin terbakar akibat hubung singkat, sudah diganti part baru.",Mesin Produksi,Tinggi,Konsleting,Penggantian Part
+"AC di ruang rapat sudah tua, dinginnya tidak maksimal lagi","Unit kompresor AC sudah sangat tua, perlu penggantian part baru.",HVAC,Tinggi,Usia Pakai,Penggantian Part
+Pompa air sering trip karena panas berlebih,"Gulungan motor pompa terbakar karena panas, sudah diganti part baru.",Pompa Air,Tinggi,Overheat,Penggantian Part
+Kabel listrik di mesin A terasa panas saat disentuh,"Kabel utama panel listrik mengalami overheat karena beban berlebih, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+Performa mesin pengemas menurun drastis dalam beberapa tahun terakhir,"Komponen utama mesin sudah habis masa pakainya, perlu penggantian part.",Mesin Produksi,Sedang,Usia Pakai,Penggantian Part
+Air AC bocor di area kantor admin,"Saluran pembuangan unit AC mampet karena lumut dan debu, sudah disemprot dan dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+"Tekanan air pompa tidak stabil, sering naik turun","Impeller pompa aus, tidak mampu memompa air maksimal, sudah diganti part baru.",Pompa Air,Sedang,Keausan,Penggantian Part
+"MCB di panel utama sering trip, padahal tidak ada beban berlebih","MCB di panel distribusi sudah habis usia pakainya, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+"Saluran oli hidrolik tersumbat, tekanan menurun","Filter oli hidrolik mampet, sudah dilakukan pembersihan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+MCB AC di lantai 3 sering jatuh sendiri,"Kapasitor AC terbakar akibat konsleting, sudah diganti part baru.",HVAC,Tinggi,Konsleting,Penggantian Part
+"Pompa air tidak mau nyala, MCB utama jeglek","Terjadi konsleting pada kabel motor pompa, sudah perbaikan jaringan.",Pompa Air,Tinggi,Konsleting,Perbaikan Jaringan
+Stop kontak di ruang istirahat meleleh,"Komponen proteksi di panel listrik overheat dan rusak, sudah diganti part baru.",Kelistrikan,Tinggi,Overheat,Penggantian Part
+"Suhu mesin melebihi batas normal, sering mati sendiri","Motor mesin produksi mengalami overheat karena beban berlebih, sudah diganti part.",Mesin Produksi,Tinggi,Overheat,Penggantian Part
+AC mengeluarkan suara mendecit saat dinyalakan,"Kipas indoor AC mulai aus, sudah dilakukan penggantian part.",HVAC,Sedang,Keausan,Penggantian Part
+Pompa terasa getarannya tidak normal,"Kopling motor pompa aus, perlu penggantian part.",Pompa Air,Sedang,Keausan,Penggantian Part
+"Semua instalasi listrik di gudang sudah sangat tua, perlu peremajaan","Kabel instalasi listrik sudah tua dan rapuh, disarankan penggantian part.",Kelistrikan,Tinggi,Usia Pakai,Penggantian Part
+Belt penggerak mesin sering selip dan berisik,"Belt conveyor aus dan kendur, sudah diganti part baru.",Mesin Produksi,Sedang,Keausan,Penggantian Part
+"AC di ruang kontrol sering mati sendiri, padahal sudah diservis","Kompresor AC mengalami overheat, diduga karena sirkulasi freon kurang optimal, sudah dikalibrasi ulang.",HVAC,Tinggi,Overheat,Kalibrasi
+Pompa mengeluarkan bau gosong setelah dipakai lama,"Sensor suhu pompa memberikan bacaan tidak akurat, menyebabkan overheat proteksi, sudah dikalibrasi.",Pompa Air,Sedang,Overheat,Kalibrasi
+"Kotoran di dalam MCB, sering trip tidak jelas","Terminal konektor kotor dan berkarat, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+Motor mesin utama sangat panas dan ada bau aneh,"Motor mesin produksi mengalami overheat karena beban berlebih, sudah diganti part.",Mesin Produksi,Tinggi,Overheat,Penggantian Part
+AC sudah sering diservis tapi masalahnya muncul lagi,"Papan sirkuit kontrol AC sudah rapuh, perlu penggantian part.",HVAC,Sedang,Usia Pakai,Penggantian Part
+Air tidak keluar sama sekali,"Impeller pompa terhalang sampah, sudah dibersihkan.",Pompa Air,Sedang,Tersumbat,Pembersihan
+"Stop kontak di area packing longgar, sering mati sendiri","Terminal stop kontak aus, sudah diganti part baru.",Kelistrikan,Sedang,Keausan,Penggantian Part
+"Produk hasil cetakan tidak presisi, mungkin karena ada bagian mesin aus","Pisau pemotong mesin aus, sudah diganti part baru.",Mesin Produksi,Tinggi,Keausan,Penggantian Part
+Unit AC di server room mengeluarkan bau apek dan ada tetesan air,"Unit indoor AC tersumbat debu tebal, sudah dibersihkan menyeluruh.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air bocor terus dari sealnya,"Seal mekanis pompa bocor akibat keausan, perlu penggantian part.",Pompa Air,Tinggi,Keausan,Penggantian Part
+"Saluran ventilasi panel tertutup debu, panel panas","Ventilasi panel utama tersumbat debu tebal, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+"Mesin pengaduk tiba-tiba mati total, ada bau gosong dari panelnya","Relay proteksi mesin terbakar akibat konsleting, sudah diganti part baru.",Mesin Produksi,Tinggi,Konsleting,Penggantian Part
+Ada percikan api di sekitar kabel AC,"Terminal konektor AC meleleh karena konsleting, sudah diganti part baru.",HVAC,Tinggi,Konsleting,Penggantian Part
+Pompa air mati total dan tercium bau terbakar,"Papan sirkuit kontrol pompa terbakar akibat hubung singkat, sudah diganti part baru.",Pompa Air,Tinggi,Konsleting,Penggantian Part
+MCB di panel sering trip dan panas,"Kabel utama panel listrik mengalami overheat karena beban berlebih, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+"Mesin sudah beroperasi lebih dari 20 tahun, perlu peremajaan","Motor penggerak mesin sudah melewati usia pakai, sudah dilakukan penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+Filter AC terlihat sangat kotor dan debunya tebal,"Filter AC kotor dan menghambat aliran udara, sudah dibersihkan dan diganti jika perlu.",HVAC,Rendah,Tersumbat,Pembersihan
+Pipa input pompa tersumbat kotoran,"Pipa isap pompa tersumbat kotoran, sudah dibersihkan.",Pompa Air,Rendah,Tersumbat,Pembersihan
+Terminal listrik terlihat kotor dan berkarat,"Terminal konektor kotor dan berkarat, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+Nozzle semprotan mesin tidak keluar cairan,"Nozzle semprotan mesin tersumbat, sudah dibersihkan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+"Fan AC tidak berputar kencang, hanya pelan","Kipas indoor AC mulai aus, sudah dilakukan penggantian part.",HVAC,Sedang,Keausan,Penggantian Part
+Sistem penggerak pompa terdengar bergesek,"Kopling motor pompa aus, perlu penggantian part.",Pompa Air,Sedang,Keausan,Penggantian Part
+Kabel di area produksi terlihat mengelupas dan usang,"Kabel instalasi listrik di area produksi mengalami keausan, sudah perbaikan jaringan.",Kelistrikan,Sedang,Keausan,Perbaikan Jaringan
+Komponen bergerak mesin terlihat oblak,"Bearing pada shaft utama mesin aus, perlu penggantian part.",Mesin Produksi,Sedang,Keausan,Penggantian Part
+Kompresor AC terasa sangat panas saat disentuh,"Kompresor AC mengalami overheat, diduga karena sirkulasi freon kurang optimal, sudah dikalibrasi ulang.",HVAC,Tinggi,Overheat,Kalibrasi
+Suara pompa terdengar aneh dan panas sekali,"Motor pompa mengalami overheat karena beban berlebih, sudah diganti part.",Pompa Air,Tinggi,Overheat,Penggantian Part
+Terdengar suara mendesis dari panel listrik yang panas,"Terminal konektor longgar menyebabkan overheat, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+Panel kontrol mesin terasa panas sekali,"Ventilasi kabinet kontrol mesin tersumbat, menyebabkan komponen overheat, sudah dibersihkan.",Mesin Produksi,Sedang,Overheat,Pembersihan
+AC sudah lebih dari 10 tahun dan sering rusak,"Papan sirkuit kontrol AC sudah rapuh, perlu penggantian part.",HVAC,Tinggi,Usia Pakai,Penggantian Part
+Pompa sering macet dan perlu di-trigger manual,"Sistem kontrol pompa sudah tua, perlu penggantian part.",Pompa Air,Sedang,Usia Pakai,Penggantian Part
+Panel kontrol terlihat kusam dan tombolnya sudah usang,"Panel kontrol utama sudah usang, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+Komponen elektronik di mesin sering gagal karena usia,"Sistem kontrol PLC mesin sudah usang, disarankan penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+Indikator listrik di AC mati dan tercium bau terbakar,"Terjadi hubungan arus pendek pada kabel power AC, sudah perbaikan jaringan kabel.",HVAC,Tinggi,Konsleting,Perbaikan Jaringan
+"Pompa air tidak mau nyala, MCB utama jeglek","Terjadi konsleting pada kabel motor pompa, sudah perbaikan jaringan.",Pompa Air,Tinggi,Konsleting,Perbaikan Jaringan
+Alarm kebakaran berbunyi karena ada asap dari panel listrik,"Isolasi kabel terkelupas menyebabkan konsleting, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Konsleting,Perbaikan Jaringan
+"Semua indikator di mesin mati total, ada bau aneh","Kabel sensor mesin mengalami konsleting, sudah perbaikan jaringan.",Mesin Produksi,Tinggi,Konsleting,Perbaikan Jaringan
+AC di ruang meeting lantai 2 netes air terus nih,"Saluran pembuangan unit AC mampet karena lumut dan debu, sudah disemprot dan dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air utama mengeluarkan suara berisik dan kasar,"Bearing motor pompa aus dan berisik, sudah diganti part baru.",Pompa Air,Tinggi,Keausan,Penggantian Part
+Lampu di gudang mati total,"MCB di panel distribusi sudah habis usia pakainya, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+"Mesin pengemas macet, produk tidak bisa lewat","Saluran feed material mesin tersumbat residu, sudah dibersihkan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+AC di lab kimia tiba-tiba mati total dan ada bau gosong,"Terjadi hubungan arus pendek pada kabel power AC, sudah perbaikan jaringan kabel.",HVAC,Tinggi,Konsleting,Perbaikan Jaringan
+Motor pompa air utama sangat panas dan mati sendiri,"Motor pompa mengalami overheat karena beban berlebih, sudah diganti part.",Pompa Air,Tinggi,Overheat,Penggantian Part
+"Panel listrik utama sangat panas, ada bau gosong samar","Terminal konektor longgar menyebabkan overheat, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+"Mesin pabrik ini sudah sangat tua, sering rusak dan susah cari sparepart","Komponen utama mesin sudah habis masa pakainya, perlu penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+"AC di ruang direksi berisik banget suaranya, dinginnya juga kurang","Motor fan outdoor AC aus dan berisik, sudah dilakukan penggantian part baru.",HVAC,Sedang,Keausan,Penggantian Part
+"Tekanan air di lantai atas pabrik sangat lemah, air tidak sampai","Pipa isap pompa tersumbat kotoran, sudah dibersihkan.",Pompa Air,Rendah,Tersumbat,Pembersihan
+"Listrik di seluruh area produksi tiba-tiba mati total, ada bau hangus","Terjadi hubungan arus pendek pada jalur listrik di area produksi, sudah perbaikan jaringan kabel.",Kelistrikan,Tinggi,Konsleting,Perbaikan Jaringan
+Ada suara gesekan keras dari mesin conveyor,"Bearing pada shaft utama mesin aus, perlu penggantian part.",Mesin Produksi,Tinggi,Keausan,Penggantian Part
+Unit AC di server room mengeluarkan bau apek dan ada tetesan air,"Sistem drainase AC tersumbat, kotoran sudah dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air bocor terus dari sealnya,"Bearing motor pompa aus dan kering, sudah dilakukan pelumasan.",Pompa Air,Sedang,Keausan,Pelumasan
+"Debu tebal di panel listrik, takut konslet","Debu dan kotoran menumpuk di dalam panel distribusi, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+"Mesin pengaduk tiba-tiba mati total, ada bau gosong dari panelnya","Papan sirkuit kontrol PLC mesin terbakar akibat hubung singkat, sudah diganti part baru.",Mesin Produksi,Tinggi,Konsleting,Penggantian Part
+"AC di ruang rapat sudah tua, dinginnya tidak maksimal lagi","Unit kompresor AC sudah sangat tua, perlu penggantian part baru.",HVAC,Tinggi,Usia Pakai,Penggantian Part
+Pompa air sering trip karena panas berlebih,"Gulungan motor pompa terbakar karena panas, sudah diganti part baru.",Pompa Air,Tinggi,Overheat,Penggantian Part
+Kabel listrik di mesin A terasa panas saat disentuh,"Kabel utama panel listrik mengalami overheat karena beban berlebih, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+Performa mesin pengemas menurun drastis dalam beberapa tahun terakhir,"Komponen utama mesin sudah habis masa pakainya, perlu penggantian part.",Mesin Produksi,Sedang,Usia Pakai,Penggantian Part
+Air AC bocor di area kantor admin,"Saluran pembuangan unit AC mampet karena lumut dan debu, sudah disemprot dan dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+"Tekanan air pompa tidak stabil, sering naik turun","Impeller pompa aus, tidak mampu memompa air maksimal, sudah diganti part baru.",Pompa Air,Sedang,Keausan,Penggantian Part
+"MCB di panel utama sering trip, padahal tidak ada beban berlebih","MCB di panel distribusi sudah habis usia pakainya, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+"Saluran oli hidrolik tersumbat, tekanan menurun","Filter oli hidrolik mampet, sudah dilakukan pembersihan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+MCB AC di lantai 3 sering jatuh sendiri,"Kapasitor AC terbakar akibat konsleting, sudah diganti part baru.",HVAC,Tinggi,Konsleting,Penggantian Part
+"Pompa air tidak mau nyala, MCB utama jeglek","Terjadi konsleting pada kabel motor pompa, sudah perbaikan jaringan.",Pompa Air,Tinggi,Konsleting,Perbaikan Jaringan
+Stop kontak di ruang istirahat meleleh,"Komponen proteksi di panel listrik overheat dan rusak, sudah diganti part baru.",Kelistrikan,Tinggi,Overheat,Penggantian Part
+"Suhu mesin melebihi batas normal, sering mati sendiri","Motor mesin produksi mengalami overheat karena beban berlebih, sudah diganti part.",Mesin Produksi,Tinggi,Overheat,Penggantian Part
+AC mengeluarkan suara mendecit saat dinyalakan,"Kipas indoor AC mulai aus, sudah dilakukan penggantian part.",HVAC,Sedang,Keausan,Penggantian Part
+Pompa terasa getarannya tidak normal,"Kopling motor pompa aus, perlu penggantian part.",Pompa Air,Sedang,Keausan,Penggantian Part
+"Semua instalasi listrik di gudang sudah sangat tua, perlu peremajaan","Kabel instalasi listrik sudah tua dan rapuh, disarankan penggantian part.",Kelistrikan,Tinggi,Usia Pakai,Penggantian Part
+Belt penggerak mesin sering selip dan berisik,"Belt conveyor aus dan kendur, sudah diganti part baru.",Mesin Produksi,Sedang,Keausan,Penggantian Part
+"AC di ruang kontrol sering mati sendiri, padahal sudah diservis","Kompresor AC mengalami overheat, diduga karena sirkulasi freon kurang optimal, sudah dikalibrasi ulang.",HVAC,Tinggi,Overheat,Kalibrasi
+Pompa mengeluarkan bau gosong setelah dipakai lama,"Sensor suhu pompa memberikan bacaan tidak akurat, menyebabkan overheat proteksi, sudah dikalibrasi.",Pompa Air,Sedang,Overheat,Kalibrasi
+"Kotoran di dalam MCB, sering trip tidak jelas","Terminal konektor kotor dan berkarat, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+Motor mesin utama sangat panas dan ada bau aneh,"Motor mesin produksi mengalami overheat karena beban berlebih, sudah diganti part.",Mesin Produksi,Tinggi,Overheat,Penggantian Part
+AC sudah sering diservis tapi masalahnya muncul lagi,"Papan sirkuit kontrol AC sudah rapuh, perlu penggantian part.",HVAC,Sedang,Usia Pakai,Penggantian Part
+Air tidak keluar sama sekali,"Impeller pompa terhalang sampah, sudah dibersihkan.",Pompa Air,Sedang,Tersumbat,Pembersihan
+"Stop kontak di area packing longgar, sering mati sendiri","Terminal stop kontak aus, sudah diganti part baru.",Kelistrikan,Sedang,Keausan,Penggantian Part
+"Produk hasil cetakan tidak presisi, mungkin karena ada bagian mesin aus","Pisau pemotong mesin aus, sudah diganti part baru.",Mesin Produksi,Tinggi,Keausan,Penggantian Part
+Unit AC di server room mengeluarkan bau apek dan ada tetesan air,"Unit indoor AC tersumbat debu tebal, sudah dibersihkan menyeluruh.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air bocor terus dari sealnya,"Seal mekanis pompa bocor akibat keausan, perlu penggantian part.",Pompa Air,Tinggi,Keausan,Penggantian Part
+"Saluran ventilasi panel tertutup debu, panel panas","Ventilasi panel utama tersumbat debu tebal, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+"Mesin pengaduk tiba-tiba mati total, ada bau gosong dari panelnya","Relay proteksi mesin terbakar akibat konsleting, sudah diganti part baru.",Mesin Produksi,Tinggi,Konsleting,Penggantian Part
+Ada percikan api di sekitar kabel AC,"Terminal konektor AC meleleh karena konsleting, sudah diganti part baru.",HVAC,Tinggi,Konsleting,Penggantian Part
+Pompa air mati total dan tercium bau terbakar,"Papan sirkuit kontrol pompa terbakar akibat hubung singkat, sudah diganti part baru.",Pompa Air,Tinggi,Konsleting,Penggantian Part
+MCB di panel sering trip dan panas,"Kabel utama panel listrik mengalami overheat karena beban berlebih, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+"Mesin sudah beroperasi lebih dari 20 tahun, perlu peremajaan","Motor penggerak mesin sudah melewati usia pakai, sudah dilakukan penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+Filter AC terlihat sangat kotor dan debunya tebal,"Filter AC kotor dan menghambat aliran udara, sudah dibersihkan dan diganti jika perlu.",HVAC,Rendah,Tersumbat,Pembersihan
+Pipa input pompa tersumbat kotoran,"Pipa isap pompa tersumbat kotoran, sudah dibersihkan.",Pompa Air,Rendah,Tersumbat,Pembersihan
+Terminal listrik terlihat kotor dan berkarat,"Terminal konektor kotor dan berkarat, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+Nozzle semprotan mesin tidak keluar cairan,"Nozzle semprotan mesin tersumbat, sudah dibersihkan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+"Fan AC tidak berputar kencang, hanya pelan","Kipas indoor AC mulai aus, sudah dilakukan penggantian part.",HVAC,Sedang,Keausan,Penggantian Part
+Sistem penggerak pompa terdengar bergesek,"Kopling motor pompa aus, perlu penggantian part.",Pompa Air,Sedang,Keausan,Penggantian Part
+Kabel di area produksi terlihat mengelupas dan usang,"Kabel instalasi listrik di area produksi mengalami keausan, sudah perbaikan jaringan.",Kelistrikan,Sedang,Keausan,Perbaikan Jaringan
+Komponen bergerak mesin terlihat oblak,"Bearing pada shaft utama mesin aus, perlu penggantian part.",Mesin Produksi,Sedang,Keausan,Penggantian Part
+Kompresor AC terasa sangat panas saat disentuh,"Kompresor AC mengalami overheat, diduga karena sirkulasi freon kurang optimal, sudah dikalibrasi ulang.",HVAC,Tinggi,Overheat,Kalibrasi
+Suara pompa terdengar aneh dan panas sekali,"Motor pompa mengalami overheat karena beban berlebih, sudah diganti part.",Pompa Air,Tinggi,Overheat,Penggantian Part
+Terdengar suara mendesis dari panel listrik yang panas,"Terminal konektor longgar menyebabkan overheat, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+Panel kontrol mesin terasa panas sekali,"Ventilasi kabinet kontrol mesin tersumbat, menyebabkan komponen overheat, sudah dibersihkan.",Mesin Produksi,Sedang,Overheat,Pembersihan
+AC sudah lebih dari 10 tahun dan sering rusak,"Papan sirkuit kontrol AC sudah rapuh, perlu penggantian part.",HVAC,Tinggi,Usia Pakai,Penggantian Part
+Pompa sering macet dan perlu di-trigger manual,"Sistem kontrol pompa sudah tua, perlu penggantian part.",Pompa Air,Sedang,Usia Pakai,Penggantian Part
+Panel kontrol terlihat kusam dan tombolnya sudah usang,"Panel kontrol utama sudah usang, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+Komponen elektronik di mesin sering gagal karena usia,"Sistem kontrol PLC mesin sudah usang, disarankan penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+Indikator listrik di AC mati dan tercium bau terbakar,"Terjadi hubungan arus pendek pada kabel power AC, sudah perbaikan jaringan kabel.",HVAC,Tinggi,Konsleting,Perbaikan Jaringan
+"Pompa air tidak mau nyala, MCB utama jeglek","Terjadi konsleting pada kabel motor pompa, sudah perbaikan jaringan.",Pompa Air,Tinggi,Konsleting,Perbaikan Jaringan
+Alarm kebakaran berbunyi karena ada asap dari panel listrik,"Isolasi kabel terkelupas menyebabkan konsleting, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Konsleting,Perbaikan Jaringan
+"Semua indikator di mesin mati total, ada bau aneh","Kabel sensor mesin mengalami konsleting, sudah perbaikan jaringan.",Mesin Produksi,Tinggi,Konsleting,Perbaikan Jaringan
+AC di ruang meeting lantai 2 netes air terus nih,"Saluran pembuangan unit AC mampet karena lumut dan debu, sudah disemprot dan dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air utama mengeluarkan suara berisik dan kasar,"Bearing motor pompa aus dan berisik, sudah diganti part baru.",Pompa Air,Tinggi,Keausan,Penggantian Part
+Lampu di gudang mati total,"MCB di panel distribusi sudah habis usia pakainya, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+"Mesin pengemas macet, produk tidak bisa lewat","Saluran feed material mesin tersumbat residu, sudah dibersihkan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+AC di lab kimia tiba-tiba mati total dan ada bau gosong,"Terjadi hubungan arus pendek pada kabel power AC, sudah perbaikan jaringan kabel.",HVAC,Tinggi,Konsleting,Perbaikan Jaringan
+Motor pompa air utama sangat panas dan mati sendiri,"Motor pompa mengalami overheat karena beban berlebih, sudah diganti part.",Pompa Air,Tinggi,Overheat,Penggantian Part
+"Panel listrik utama sangat panas, ada bau gosong samar","Terminal konektor longgar menyebabkan overheat, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+"Mesin pabrik ini sudah sangat tua, sering rusak dan susah cari sparepart","Komponen utama mesin sudah habis masa pakainya, perlu penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+"AC di ruang direksi berisik banget suaranya, dinginnya juga kurang","Motor fan outdoor AC aus dan berisik, sudah dilakukan penggantian part baru.",HVAC,Sedang,Keausan,Penggantian Part
+"Tekanan air di lantai atas pabrik sangat lemah, air tidak sampai","Pipa isap pompa tersumbat kotoran, sudah dibersihkan.",Pompa Air,Rendah,Tersumbat,Pembersihan
+"Listrik di seluruh area produksi tiba-tiba mati total, ada bau hangus","Terjadi hubungan arus pendek pada jalur listrik di area produksi, sudah perbaikan jaringan kabel.",Kelistrikan,Tinggi,Konsleting,Perbaikan Jaringan
+Ada suara gesekan keras dari mesin conveyor,"Bearing pada shaft utama mesin aus, perlu penggantian part.",Mesin Produksi,Tinggi,Keausan,Penggantian Part
+Unit AC di server room mengeluarkan bau apek dan ada tetesan air,"Sistem drainase AC tersumbat, kotoran sudah dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air bocor terus dari sealnya,"Bearing motor pompa aus dan kering, sudah dilakukan pelumasan.",Pompa Air,Sedang,Keausan,Pelumasan
+"Debu tebal di panel listrik, takut konslet","Debu dan kotoran menumpuk di dalam panel distribusi, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+"Mesin pengaduk tiba-tiba mati total, ada bau gosong dari panelnya","Papan sirkuit kontrol PLC mesin terbakar akibat hubung singkat, sudah diganti part baru.",Mesin Produksi,Tinggi,Konsleting,Penggantian Part
+"AC di ruang rapat sudah tua, dinginnya tidak maksimal lagi","Unit kompresor AC sudah sangat tua, perlu penggantian part baru.",HVAC,Tinggi,Usia Pakai,Penggantian Part
+Pompa air sering trip karena panas berlebih,"Gulungan motor pompa terbakar karena panas, sudah diganti part baru.",Pompa Air,Tinggi,Overheat,Penggantian Part
+Kabel listrik di mesin A terasa panas saat disentuh,"Kabel utama panel listrik mengalami overheat karena beban berlebih, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+Performa mesin pengemas menurun drastis dalam beberapa tahun terakhir,"Komponen utama mesin sudah habis masa pakainya, perlu penggantian part.",Mesin Produksi,Sedang,Usia Pakai,Penggantian Part
+Air AC bocor di area kantor admin,"Saluran pembuangan unit AC mampet karena lumut dan debu, sudah disemprot dan dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+"Tekanan air pompa tidak stabil, sering naik turun","Impeller pompa aus, tidak mampu memompa air maksimal, sudah diganti part baru.",Pompa Air,Sedang,Keausan,Penggantian Part
+"MCB di panel utama sering trip, padahal tidak ada beban berlebih","MCB di panel distribusi sudah habis usia pakainya, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+"Saluran oli hidrolik tersumbat, tekanan menurun","Filter oli hidrolik mampet, sudah dilakukan pembersihan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+MCB AC di lantai 3 sering jatuh sendiri,"Kapasitor AC terbakar akibat konsleting, sudah diganti part baru.",HVAC,Tinggi,Konsleting,Penggantian Part
+"Pompa air tidak mau nyala, MCB utama jeglek","Terjadi konsleting pada kabel motor pompa, sudah perbaikan jaringan.",Pompa Air,Tinggi,Konsleting,Perbaikan Jaringan
+Stop kontak di ruang istirahat meleleh,"Komponen proteksi di panel listrik overheat dan rusak, sudah diganti part baru.",Kelistrikan,Tinggi,Overheat,Penggantian Part
+"Suhu mesin melebihi batas normal, sering mati sendiri","Motor mesin produksi mengalami overheat karena beban berlebih, sudah diganti part.",Mesin Produksi,Tinggi,Overheat,Penggantian Part
+AC mengeluarkan suara mendecit saat dinyalakan,"Kipas indoor AC mulai aus, sudah dilakukan penggantian part.",HVAC,Sedang,Keausan,Penggantian Part
+Pompa terasa getarannya tidak normal,"Kopling motor pompa aus, perlu penggantian part.",Pompa Air,Sedang,Keausan,Penggantian Part
+"Semua instalasi listrik di gudang sudah sangat tua, perlu peremajaan","Kabel instalasi listrik sudah tua dan rapuh, disarankan penggantian part.",Kelistrikan,Tinggi,Usia Pakai,Penggantian Part
+Belt penggerak mesin sering selip dan berisik,"Belt conveyor aus dan kendur, sudah diganti part baru.",Mesin Produksi,Sedang,Keausan,Penggantian Part
+"AC di ruang kontrol sering mati sendiri, padahal sudah diservis","Kompresor AC mengalami overheat, diduga karena sirkulasi freon kurang optimal, sudah dikalibrasi ulang.",HVAC,Tinggi,Overheat,Kalibrasi
+Pompa mengeluarkan bau gosong setelah dipakai lama,"Sensor suhu pompa memberikan bacaan tidak akurat, menyebabkan overheat proteksi, sudah dikalibrasi.",Pompa Air,Sedang,Overheat,Kalibrasi
+"Kotoran di dalam MCB, sering trip tidak jelas","Terminal konektor kotor dan berkarat, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+Motor mesin utama sangat panas dan ada bau aneh,"Motor mesin produksi mengalami overheat karena beban berlebih, sudah diganti part.",Mesin Produksi,Tinggi,Overheat,Penggantian Part
+AC sudah sering diservis tapi masalahnya muncul lagi,"Papan sirkuit kontrol AC sudah rapuh, perlu penggantian part.",HVAC,Sedang,Usia Pakai,Penggantian Part
+Air tidak keluar sama sekali,"Impeller pompa terhalang sampah, sudah dibersihkan.",Pompa Air,Sedang,Tersumbat,Pembersihan
+"Stop kontak di area packing longgar, sering mati sendiri","Terminal stop kontak aus, sudah diganti part baru.",Kelistrikan,Sedang,Keausan,Penggantian Part
+"Produk hasil cetakan tidak presisi, mungkin karena ada bagian mesin aus","Pisau pemotong mesin aus, sudah diganti part baru.",Mesin Produksi,Tinggi,Keausan,Penggantian Part
+Unit AC di server room mengeluarkan bau apek dan ada tetesan air,"Unit indoor AC tersumbat debu tebal, sudah dibersihkan menyeluruh.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air bocor terus dari sealnya,"Seal mekanis pompa bocor akibat keausan, perlu penggantian part.",Pompa Air,Tinggi,Keausan,Penggantian Part
+"Saluran ventilasi panel tertutup debu, panel panas","Ventilasi panel utama tersumbat debu tebal, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+"Mesin pengaduk tiba-tiba mati total, ada bau gosong dari panelnya","Relay proteksi mesin terbakar akibat konsleting, sudah diganti part baru.",Mesin Produksi,Tinggi,Konsleting,Penggantian Part
+Ada percikan api di sekitar kabel AC,"Terminal konektor AC meleleh karena konsleting, sudah diganti part baru.",HVAC,Tinggi,Konsleting,Penggantian Part
+Pompa air mati total dan tercium bau terbakar,"Papan sirkuit kontrol pompa terbakar akibat hubung singkat, sudah diganti part baru.",Pompa Air,Tinggi,Konsleting,Penggantian Part
+MCB di panel sering trip dan panas,"Kabel utama panel listrik mengalami overheat karena beban berlebih, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+"Mesin sudah beroperasi lebih dari 20 tahun, perlu peremajaan","Motor penggerak mesin sudah melewati usia pakai, sudah dilakukan penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+Filter AC terlihat sangat kotor dan debunya tebal,"Filter AC kotor dan menghambat aliran udara, sudah dibersihkan dan diganti jika perlu.",HVAC,Rendah,Tersumbat,Pembersihan
+Pipa input pompa tersumbat kotoran,"Pipa isap pompa tersumbat kotoran, sudah dibersihkan.",Pompa Air,Rendah,Tersumbat,Pembersihan
+Terminal listrik terlihat kotor dan berkarat,"Terminal konektor kotor dan berkarat, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+Nozzle semprotan mesin tidak keluar cairan,"Nozzle semprotan mesin tersumbat, sudah dibersihkan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+"Fan AC tidak berputar kencang, hanya pelan","Kipas indoor AC mulai aus, sudah dilakukan penggantian part.",HVAC,Sedang,Keausan,Penggantian Part
+Sistem penggerak pompa terdengar bergesek,"Kopling motor pompa aus, perlu penggantian part.",Pompa Air,Sedang,Keausan,Penggantian Part
+Kabel di area produksi terlihat mengelupas dan usang,"Kabel instalasi listrik di area produksi mengalami keausan, sudah perbaikan jaringan.",Kelistrikan,Sedang,Keausan,Perbaikan Jaringan
+Komponen bergerak mesin terlihat oblak,"Bearing pada shaft utama mesin aus, perlu penggantian part.",Mesin Produksi,Sedang,Keausan,Penggantian Part
+Kompresor AC terasa sangat panas saat disentuh,"Kompresor AC mengalami overheat, diduga karena sirkulasi freon kurang optimal, sudah dikalibrasi ulang.",HVAC,Tinggi,Overheat,Kalibrasi
+Suara pompa terdengar aneh dan panas sekali,"Motor pompa mengalami overheat karena beban berlebih, sudah diganti part.",Pompa Air,Tinggi,Overheat,Penggantian Part
+Terdengar suara mendesis dari panel listrik yang panas,"Terminal konektor longgar menyebabkan overheat, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+Panel kontrol mesin terasa panas sekali,"Ventilasi kabinet kontrol mesin tersumbat, menyebabkan komponen overheat, sudah dibersihkan.",Mesin Produksi,Sedang,Overheat,Pembersihan
+AC sudah lebih dari 10 tahun dan sering rusak,"Papan sirkuit kontrol AC sudah rapuh, perlu penggantian part.",HVAC,Tinggi,Usia Pakai,Penggantian Part
+Pompa sering macet dan perlu di-trigger manual,"Sistem kontrol pompa sudah tua, perlu penggantian part.",Pompa Air,Sedang,Usia Pakai,Penggantian Part
+Panel kontrol terlihat kusam dan tombolnya sudah usang,"Panel kontrol utama sudah usang, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+Komponen elektronik di mesin sering gagal karena usia,"Sistem kontrol PLC mesin sudah usang, disarankan penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+Indikator listrik di AC mati dan tercium bau terbakar,"Terjadi hubungan arus pendek pada kabel power AC, sudah perbaikan jaringan kabel.",HVAC,Tinggi,Konsleting,Perbaikan Jaringan
+"Pompa air tidak mau nyala, MCB utama jeglek","Terjadi konsleting pada kabel motor pompa, sudah perbaikan jaringan.",Pompa Air,Tinggi,Konsleting,Perbaikan Jaringan
+Alarm kebakaran berbunyi karena ada asap dari panel listrik,"Isolasi kabel terkelupas menyebabkan konsleting, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Konsleting,Perbaikan Jaringan
+"Semua indikator di mesin mati total, ada bau aneh","Kabel sensor mesin mengalami konsleting, sudah perbaikan jaringan.",Mesin Produksi,Tinggi,Konsleting,Perbaikan Jaringan
+AC di ruang meeting lantai 2 netes air terus nih,"Saluran pembuangan unit AC mampet karena lumut dan debu, sudah disemprot dan dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air utama mengeluarkan suara berisik dan kasar,"Bearing motor pompa aus dan berisik, sudah diganti part baru.",Pompa Air,Tinggi,Keausan,Penggantian Part
+Lampu di gudang mati total,"MCB di panel distribusi sudah habis usia pakainya, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+"Mesin pengemas macet, produk tidak bisa lewat","Saluran feed material mesin tersumbat residu, sudah dibersihkan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+AC di lab kimia tiba-tiba mati total dan ada bau gosong,"Terjadi hubungan arus pendek pada kabel power AC, sudah perbaikan jaringan kabel.",HVAC,Tinggi,Konsleting,Perbaikan Jaringan
+Motor pompa air utama sangat panas dan mati sendiri,"Motor pompa mengalami overheat karena beban berlebih, sudah diganti part.",Pompa Air,Tinggi,Overheat,Penggantian Part
+"Panel listrik utama sangat panas, ada bau gosong samar","Terminal konektor longgar menyebabkan overheat, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+"Mesin pabrik ini sudah sangat tua, sering rusak dan susah cari sparepart","Komponen utama mesin sudah habis masa pakainya, perlu penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+"AC di ruang direksi berisik banget suaranya, dinginnya juga kurang","Motor fan outdoor AC aus dan berisik, sudah dilakukan penggantian part baru.",HVAC,Sedang,Keausan,Penggantian Part
+"Tekanan air di lantai atas pabrik sangat lemah, air tidak sampai","Pipa isap pompa tersumbat kotoran, sudah dibersihkan.",Pompa Air,Rendah,Tersumbat,Pembersihan
+"Listrik di seluruh area produksi tiba-tiba mati total, ada bau hangus","Terjadi hubungan arus pendek pada jalur listrik di area produksi, sudah perbaikan jaringan kabel.",Kelistrikan,Tinggi,Konsleting,Perbaikan Jaringan
+Ada suara gesekan keras dari mesin conveyor,"Bearing pada shaft utama mesin aus, perlu penggantian part.",Mesin Produksi,Tinggi,Keausan,Penggantian Part
+Unit AC di server room mengeluarkan bau apek dan ada tetesan air,"Sistem drainase AC tersumbat, kotoran sudah dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air bocor terus dari sealnya,"Bearing motor pompa aus dan kering, sudah dilakukan pelumasan.",Pompa Air,Sedang,Keausan,Pelumasan
+"Debu tebal di panel listrik, takut konslet","Debu dan kotoran menumpuk di dalam panel distribusi, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+"Mesin pengaduk tiba-tiba mati total, ada bau gosong dari panelnya","Papan sirkuit kontrol PLC mesin terbakar akibat hubung singkat, sudah diganti part baru.",Mesin Produksi,Tinggi,Konsleting,Penggantian Part
+"AC di ruang rapat sudah tua, dinginnya tidak maksimal lagi","Unit kompresor AC sudah sangat tua, perlu penggantian part baru.",HVAC,Tinggi,Usia Pakai,Penggantian Part
+Pompa air sering trip karena panas berlebih,"Gulungan motor pompa terbakar karena panas, sudah diganti part baru.",Pompa Air,Tinggi,Overheat,Penggantian Part
+Kabel listrik di mesin A terasa panas saat disentuh,"Kabel utama panel listrik mengalami overheat karena beban berlebih, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+Performa mesin pengemas menurun drastis dalam beberapa tahun terakhir,"Komponen utama mesin sudah habis masa pakainya, perlu penggantian part.",Mesin Produksi,Sedang,Usia Pakai,Penggantian Part
+Air AC bocor di area kantor admin,"Saluran pembuangan unit AC mampet karena lumut dan debu, sudah disemprot dan dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+"Tekanan air pompa tidak stabil, sering naik turun","Impeller pompa aus, tidak mampu memompa air maksimal, sudah diganti part baru.",Pompa Air,Sedang,Keausan,Penggantian Part
+"MCB di panel utama sering trip, padahal tidak ada beban berlebih","MCB di panel distribusi sudah habis usia pakainya, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+"Saluran oli hidrolik tersumbat, tekanan menurun","Filter oli hidrolik mampet, sudah dilakukan pembersihan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+MCB AC di lantai 3 sering jatuh sendiri,"Kapasitor AC terbakar akibat konsleting, sudah diganti part baru.",HVAC,Tinggi,Konsleting,Penggantian Part
+"Pompa air tidak mau nyala, MCB utama jeglek","Terjadi konsleting pada kabel motor pompa, sudah perbaikan jaringan.",Pompa Air,Tinggi,Konsleting,Perbaikan Jaringan
+Stop kontak di ruang istirahat meleleh,"Komponen proteksi di panel listrik overheat dan rusak, sudah diganti part baru.",Kelistrikan,Tinggi,Overheat,Penggantian Part
+"Suhu mesin melebihi batas normal, sering mati sendiri","Motor mesin produksi mengalami overheat karena beban berlebih, sudah diganti part.",Mesin Produksi,Tinggi,Overheat,Penggantian Part
+AC mengeluarkan suara mendecit saat dinyalakan,"Kipas indoor AC mulai aus, sudah dilakukan penggantian part.",HVAC,Sedang,Keausan,Penggantian Part
+Pompa terasa getarannya tidak normal,"Kopling motor pompa aus, perlu penggantian part.",Pompa Air,Sedang,Keausan,Penggantian Part
+"Semua instalasi listrik di gudang sudah sangat tua, perlu peremajaan","Kabel instalasi listrik sudah tua dan rapuh, disarankan penggantian part.",Kelistrikan,Tinggi,Usia Pakai,Penggantian Part
+Belt penggerak mesin sering selip dan berisik,"Belt conveyor aus dan kendur, sudah diganti part baru.",Mesin Produksi,Sedang,Keausan,Penggantian Part
+"AC di ruang kontrol sering mati sendiri, padahal sudah diservis","Kompresor AC mengalami overheat, diduga karena sirkulasi freon kurang optimal, sudah dikalibrasi ulang.",HVAC,Tinggi,Overheat,Kalibrasi
+Pompa mengeluarkan bau gosong setelah dipakai lama,"Sensor suhu pompa memberikan bacaan tidak akurat, menyebabkan overheat proteksi, sudah dikalibrasi.",Pompa Air,Sedang,Overheat,Kalibrasi
+"Kotoran di dalam MCB, sering trip tidak jelas","Terminal konektor kotor dan berkarat, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+Motor mesin utama sangat panas dan ada bau aneh,"Motor mesin produksi mengalami overheat karena beban berlebih, sudah diganti part.",Mesin Produksi,Tinggi,Overheat,Penggantian Part
+AC sudah sering diservis tapi masalahnya muncul lagi,"Papan sirkuit kontrol AC sudah rapuh, perlu penggantian part.",HVAC,Sedang,Usia Pakai,Penggantian Part
+Air tidak keluar sama sekali,"Impeller pompa terhalang sampah, sudah dibersihkan.",Pompa Air,Sedang,Tersumbat,Pembersihan
+"Stop kontak di area packing longgar, sering mati sendiri","Terminal stop kontak aus, sudah diganti part baru.",Kelistrikan,Sedang,Keausan,Penggantian Part
+"Produk hasil cetakan tidak presisi, mungkin karena ada bagian mesin aus","Pisau pemotong mesin aus, sudah diganti part baru.",Mesin Produksi,Tinggi,Keausan,Penggantian Part
+Unit AC di server room mengeluarkan bau apek dan ada tetesan air,"Unit indoor AC tersumbat debu tebal, sudah dibersihkan menyeluruh.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air bocor terus dari sealnya,"Seal mekanis pompa bocor akibat keausan, perlu penggantian part.",Pompa Air,Tinggi,Keausan,Penggantian Part
+"Saluran ventilasi panel tertutup debu, panel panas","Ventilasi panel utama tersumbat debu tebal, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+"Mesin pengaduk tiba-tiba mati total, ada bau gosong dari panelnya","Relay proteksi mesin terbakar akibat konsleting, sudah diganti part baru.",Mesin Produksi,Tinggi,Konsleting,Penggantian Part
+Ada percikan api di sekitar kabel AC,"Terminal konektor AC meleleh karena konsleting, sudah diganti part baru.",HVAC,Tinggi,Konsleting,Penggantian Part
+Pompa air mati total dan tercium bau terbakar,"Papan sirkuit kontrol pompa terbakar akibat hubung singkat, sudah diganti part baru.",Pompa Air,Tinggi,Konsleting,Penggantian Part
+MCB di panel sering trip dan panas,"Kabel utama panel listrik mengalami overheat karena beban berlebih, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+"Mesin sudah beroperasi lebih dari 20 tahun, perlu peremajaan","Motor penggerak mesin sudah melewati usia pakai, sudah dilakukan penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+Filter AC terlihat sangat kotor dan debunya tebal,"Filter AC kotor dan menghambat aliran udara, sudah dibersihkan dan diganti jika perlu.",HVAC,Rendah,Tersumbat,Pembersihan
+Pipa input pompa tersumbat kotoran,"Pipa isap pompa tersumbat kotoran, sudah dibersihkan.",Pompa Air,Rendah,Tersumbat,Pembersihan
+Terminal listrik terlihat kotor dan berkarat,"Terminal konektor kotor dan berkarat, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+Nozzle semprotan mesin tidak keluar cairan,"Nozzle semprotan mesin tersumbat, sudah dibersihkan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+"Fan AC tidak berputar kencang, hanya pelan","Kipas indoor AC mulai aus, sudah dilakukan penggantian part.",HVAC,Sedang,Keausan,Penggantian Part
+Sistem penggerak pompa terdengar bergesek,"Kopling motor pompa aus, perlu penggantian part.",Pompa Air,Sedang,Keausan,Penggantian Part
+Kabel di area produksi terlihat mengelupas dan usang,"Kabel instalasi listrik di area produksi mengalami keausan, sudah perbaikan jaringan.",Kelistrikan,Sedang,Keausan,Perbaikan Jaringan
+Komponen bergerak mesin terlihat oblak,"Bearing pada shaft utama mesin aus, perlu penggantian part.",Mesin Produksi,Sedang,Keausan,Penggantian Part
+Kompresor AC terasa sangat panas saat disentuh,"Kompresor AC mengalami overheat, diduga karena sirkulasi freon kurang optimal, sudah dikalibrasi ulang.",HVAC,Tinggi,Overheat,Kalibrasi
+Suara pompa terdengar aneh dan panas sekali,"Motor pompa mengalami overheat karena beban berlebih, sudah diganti part.",Pompa Air,Tinggi,Overheat,Penggantian Part
+Terdengar suara mendesis dari panel listrik yang panas,"Terminal konektor longgar menyebabkan overheat, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+Panel kontrol mesin terasa panas sekali,"Ventilasi kabinet kontrol mesin tersumbat, menyebabkan komponen overheat, sudah dibersihkan.",Mesin Produksi,Sedang,Overheat,Pembersihan
+AC sudah lebih dari 10 tahun dan sering rusak,"Papan sirkuit kontrol AC sudah rapuh, perlu penggantian part.",HVAC,Tinggi,Usia Pakai,Penggantian Part
+Pompa sering macet dan perlu di-trigger manual,"Sistem kontrol pompa sudah tua, perlu penggantian part.",Pompa Air,Sedang,Usia Pakai,Penggantian Part
+Panel kontrol terlihat kusam dan tombolnya sudah usang,"Panel kontrol utama sudah usang, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+Komponen elektronik di mesin sering gagal karena usia,"Sistem kontrol PLC mesin sudah usang, disarankan penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+Indikator listrik di AC mati dan tercium bau terbakar,"Terjadi hubungan arus pendek pada kabel power AC, sudah perbaikan jaringan kabel.",HVAC,Tinggi,Konsleting,Perbaikan Jaringan
+"Pompa air tidak mau nyala, MCB utama jeglek","Terjadi konsleting pada kabel motor pompa, sudah perbaikan jaringan.",Pompa Air,Tinggi,Konsleting,Perbaikan Jaringan
+Alarm kebakaran berbunyi karena ada asap dari panel listrik,"Isolasi kabel terkelupas menyebabkan konsleting, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Konsleting,Perbaikan Jaringan
+"Semua indikator di mesin mati total, ada bau aneh","Kabel sensor mesin mengalami konsleting, sudah perbaikan jaringan.",Mesin Produksi,Tinggi,Konsleting,Perbaikan Jaringan
+AC di ruang meeting lantai 2 netes air terus nih,"Saluran pembuangan unit AC mampet karena lumut dan debu, sudah disemprot dan dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air utama mengeluarkan suara berisik dan kasar,"Bearing motor pompa aus dan berisik, sudah diganti part baru.",Pompa Air,Tinggi,Keausan,Penggantian Part
+Lampu di gudang mati total,"MCB di panel distribusi sudah habis usia pakainya, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+"Mesin pengemas macet, produk tidak bisa lewat","Saluran feed material mesin tersumbat residu, sudah dibersihkan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+AC di lab kimia tiba-tiba mati total dan ada bau gosong,"Terjadi hubungan arus pendek pada kabel power AC, sudah perbaikan jaringan kabel.",HVAC,Tinggi,Konsleting,Perbaikan Jaringan
+Motor pompa air utama sangat panas dan mati sendiri,"Motor pompa mengalami overheat karena beban berlebih, sudah diganti part.",Pompa Air,Tinggi,Overheat,Penggantian Part
+"Panel listrik utama sangat panas, ada bau gosong samar","Terminal konektor longgar menyebabkan overheat, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+"Mesin pabrik ini sudah sangat tua, sering rusak dan susah cari sparepart","Komponen utama mesin sudah habis masa pakainya, perlu penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+"AC di ruang direksi berisik banget suaranya, dinginnya juga kurang","Motor fan outdoor AC aus dan berisik, sudah dilakukan penggantian part baru.",HVAC,Sedang,Keausan,Penggantian Part
+"Tekanan air di lantai atas pabrik sangat lemah, air tidak sampai","Pipa isap pompa tersumbat kotoran, sudah dibersihkan.",Pompa Air,Rendah,Tersumbat,Pembersihan
+"Listrik di seluruh area produksi tiba-tiba mati total, ada bau hangus","Terjadi hubungan arus pendek pada jalur listrik di area produksi, sudah perbaikan jaringan kabel.",Kelistrikan,Tinggi,Konsleting,Perbaikan Jaringan
+Ada suara gesekan keras dari mesin conveyor,"Bearing pada shaft utama mesin aus, perlu penggantian part.",Mesin Produksi,Tinggi,Keausan,Penggantian Part
+Unit AC di server room mengeluarkan bau apek dan ada tetesan air,"Sistem drainase AC tersumbat, kotoran sudah dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air bocor terus dari sealnya,"Bearing motor pompa aus dan kering, sudah dilakukan pelumasan.",Pompa Air,Sedang,Keausan,Pelumasan
+"Debu tebal di panel listrik, takut konslet","Debu dan kotoran menumpuk di dalam panel distribusi, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+"Mesin pengaduk tiba-tiba mati total, ada bau gosong dari panelnya","Papan sirkuit kontrol PLC mesin terbakar akibat hubung singkat, sudah diganti part baru.",Mesin Produksi,Tinggi,Konsleting,Penggantian Part
+"AC di ruang rapat sudah tua, dinginnya tidak maksimal lagi","Unit kompresor AC sudah sangat tua, perlu penggantian part baru.",HVAC,Tinggi,Usia Pakai,Penggantian Part
+Pompa air sering trip karena panas berlebih,"Gulungan motor pompa terbakar karena panas, sudah diganti part baru.",Pompa Air,Tinggi,Overheat,Penggantian Part
+Kabel listrik di mesin A terasa panas saat disentuh,"Kabel utama panel listrik mengalami overheat karena beban berlebih, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+Performa mesin pengemas menurun drastis dalam beberapa tahun terakhir,"Komponen utama mesin sudah habis masa pakainya, perlu penggantian part.",Mesin Produksi,Sedang,Usia Pakai,Penggantian Part
+Air AC bocor di area kantor admin,"Saluran pembuangan unit AC mampet karena lumut dan debu, sudah disemprot dan dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+"Tekanan air pompa tidak stabil, sering naik turun","Impeller pompa aus, tidak mampu memompa air maksimal, sudah diganti part baru.",Pompa Air,Sedang,Keausan,Penggantian Part
+"MCB di panel utama sering trip, padahal tidak ada beban berlebih","MCB di panel distribusi sudah habis usia pakainya, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+"Saluran oli hidrolik tersumbat, tekanan menurun","Filter oli hidrolik mampet, sudah dilakukan pembersihan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+MCB AC di lantai 3 sering jatuh sendiri,"Kapasitor AC terbakar akibat konsleting, sudah diganti part baru.",HVAC,Tinggi,Konsleting,Penggantian Part
+"Pompa air tidak mau nyala, MCB utama jeglek","Terjadi konsleting pada kabel motor pompa, sudah perbaikan jaringan.",Pompa Air,Tinggi,Konsleting,Perbaikan Jaringan
+Stop kontak di ruang istirahat meleleh,"Komponen proteksi di panel listrik overheat dan rusak, sudah diganti part baru.",Kelistrikan,Tinggi,Overheat,Penggantian Part
+"Suhu mesin melebihi batas normal, sering mati sendiri","Motor mesin produksi mengalami overheat karena beban berlebih, sudah diganti part.",Mesin Produksi,Tinggi,Overheat,Penggantian Part
+AC mengeluarkan suara mendecit saat dinyalakan,"Kipas indoor AC mulai aus, sudah dilakukan penggantian part.",HVAC,Sedang,Keausan,Penggantian Part
+Pompa terasa getarannya tidak normal,"Kopling motor pompa aus, perlu penggantian part.",Pompa Air,Sedang,Keausan,Penggantian Part
+"Semua instalasi listrik di gudang sudah sangat tua, perlu peremajaan","Kabel instalasi listrik sudah tua dan rapuh, disarankan penggantian part.",Kelistrikan,Tinggi,Usia Pakai,Penggantian Part
+Belt penggerak mesin sering selip dan berisik,"Belt conveyor aus dan kendur, sudah diganti part baru.",Mesin Produksi,Sedang,Keausan,Penggantian Part
+"AC di ruang kontrol sering mati sendiri, padahal sudah diservis","Kompresor AC mengalami overheat, diduga karena sirkulasi freon kurang optimal, sudah dikalibrasi ulang.",HVAC,Tinggi,Overheat,Kalibrasi
+Pompa mengeluarkan bau gosong setelah dipakai lama,"Sensor suhu pompa memberikan bacaan tidak akurat, menyebabkan overheat proteksi, sudah dikalibrasi.",Pompa Air,Sedang,Overheat,Kalibrasi
+"Kotoran di dalam MCB, sering trip tidak jelas","Terminal konektor kotor dan berkarat, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+Motor mesin utama sangat panas dan ada bau aneh,"Motor mesin produksi mengalami overheat karena beban berlebih, sudah diganti part.",Mesin Produksi,Tinggi,Overheat,Penggantian Part
+AC sudah sering diservis tapi masalahnya muncul lagi,"Papan sirkuit kontrol AC sudah rapuh, perlu penggantian part.",HVAC,Sedang,Usia Pakai,Penggantian Part
+Air tidak keluar sama sekali,"Impeller pompa terhalang sampah, sudah dibersihkan.",Pompa Air,Sedang,Tersumbat,Pembersihan
+"Stop kontak di area packing longgar, sering mati sendiri","Terminal stop kontak aus, sudah diganti part baru.",Kelistrikan,Sedang,Keausan,Penggantian Part
+"Produk hasil cetakan tidak presisi, mungkin karena ada bagian mesin aus","Pisau pemotong mesin aus, sudah diganti part baru.",Mesin Produksi,Tinggi,Keausan,Penggantian Part
+Unit AC di server room mengeluarkan bau apek dan ada tetesan air,"Unit indoor AC tersumbat debu tebal, sudah dibersihkan menyeluruh.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air bocor terus dari sealnya,"Seal mekanis pompa bocor akibat keausan, perlu penggantian part.",Pompa Air,Tinggi,Keausan,Penggantian Part
+"Saluran ventilasi panel tertutup debu, panel panas","Ventilasi panel utama tersumbat debu tebal, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+"Mesin pengaduk tiba-tiba mati total, ada bau gosong dari panelnya","Relay proteksi mesin terbakar akibat konsleting, sudah diganti part baru.",Mesin Produksi,Tinggi,Konsleting,Penggantian Part
+Ada percikan api di sekitar kabel AC,"Terminal konektor AC meleleh karena konsleting, sudah diganti part baru.",HVAC,Tinggi,Konsleting,Penggantian Part
+Pompa air mati total dan tercium bau terbakar,"Papan sirkuit kontrol pompa terbakar akibat hubung singkat, sudah diganti part baru.",Pompa Air,Tinggi,Konsleting,Penggantian Part
+MCB di panel sering trip dan panas,"Kabel utama panel listrik mengalami overheat karena beban berlebih, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+"Mesin sudah beroperasi lebih dari 20 tahun, perlu peremajaan","Motor penggerak mesin sudah melewati usia pakai, sudah dilakukan penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+Filter AC terlihat sangat kotor dan debunya tebal,"Filter AC kotor dan menghambat aliran udara, sudah dibersihkan dan diganti jika perlu.",HVAC,Rendah,Tersumbat,Pembersihan
+Pipa input pompa tersumbat kotoran,"Pipa isap pompa tersumbat kotoran, sudah dibersihkan.",Pompa Air,Rendah,Tersumbat,Pembersihan
+Terminal listrik terlihat kotor dan berkarat,"Terminal konektor kotor dan berkarat, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+Nozzle semprotan mesin tidak keluar cairan,"Nozzle semprotan mesin tersumbat, sudah dibersihkan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+"Fan AC tidak berputar kencang, hanya pelan","Kipas indoor AC mulai aus, sudah dilakukan penggantian part.",HVAC,Sedang,Keausan,Penggantian Part
+Sistem penggerak pompa terdengar bergesek,"Kopling motor pompa aus, perlu penggantian part.",Pompa Air,Sedang,Keausan,Penggantian Part
+Kabel di area produksi terlihat mengelupas dan usang,"Kabel instalasi listrik di area produksi mengalami keausan, sudah perbaikan jaringan.",Kelistrikan,Sedang,Keausan,Perbaikan Jaringan
+Komponen bergerak mesin terlihat oblak,"Bearing pada shaft utama mesin aus, perlu penggantian part.",Mesin Produksi,Sedang,Keausan,Penggantian Part
+Kompresor AC terasa sangat panas saat disentuh,"Kompresor AC mengalami overheat, diduga karena sirkulasi freon kurang optimal, sudah dikalibrasi ulang.",HVAC,Tinggi,Overheat,Kalibrasi
+Suara pompa terdengar aneh dan panas sekali,"Motor pompa mengalami overheat karena beban berlebih, sudah diganti part.",Pompa Air,Tinggi,Overheat,Penggantian Part
+Terdengar suara mendesis dari panel listrik yang panas,"Terminal konektor longgar menyebabkan overheat, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+Panel kontrol mesin terasa panas sekali,"Ventilasi kabinet kontrol mesin tersumbat, menyebabkan komponen overheat, sudah dibersihkan.",Mesin Produksi,Sedang,Overheat,Pembersihan
+AC sudah lebih dari 10 tahun dan sering rusak,"Papan sirkuit kontrol AC sudah rapuh, perlu penggantian part.",HVAC,Tinggi,Usia Pakai,Penggantian Part
+Pompa sering macet dan perlu di-trigger manual,"Sistem kontrol pompa sudah tua, perlu penggantian part.",Pompa Air,Sedang,Usia Pakai,Penggantian Part
+Panel kontrol terlihat kusam dan tombolnya sudah usang,"Panel kontrol utama sudah usang, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+Komponen elektronik di mesin sering gagal karena usia,"Sistem kontrol PLC mesin sudah usang, disarankan penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+Indikator listrik di AC mati dan tercium bau terbakar,"Terjadi hubungan arus pendek pada kabel power AC, sudah perbaikan jaringan kabel.",HVAC,Tinggi,Konsleting,Perbaikan Jaringan
+"Pompa air tidak mau nyala, MCB utama jeglek","Terjadi konsleting pada kabel motor pompa, sudah perbaikan jaringan.",Pompa Air,Tinggi,Konsleting,Perbaikan Jaringan
+Alarm kebakaran berbunyi karena ada asap dari panel listrik,"Isolasi kabel terkelupas menyebabkan konsleting, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Konsleting,Perbaikan Jaringan
+"Semua indikator di mesin mati total, ada bau aneh","Kabel sensor mesin mengalami konsleting, sudah perbaikan jaringan.",Mesin Produksi,Tinggi,Konsleting,Perbaikan Jaringan
+AC di ruang meeting lantai 2 netes air terus nih,"Saluran pembuangan unit AC mampet karena lumut dan debu, sudah disemprot dan dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air utama mengeluarkan suara berisik dan kasar,"Bearing motor pompa aus dan berisik, sudah diganti part baru.",Pompa Air,Tinggi,Keausan,Penggantian Part
+Lampu di gudang mati total,"MCB di panel distribusi sudah habis usia pakainya, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+"Mesin pengemas macet, produk tidak bisa lewat","Saluran feed material mesin tersumbat residu, sudah dibersihkan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+AC di lab kimia tiba-tiba mati total dan ada bau gosong,"Terjadi hubungan arus pendek pada kabel power AC, sudah perbaikan jaringan kabel.",HVAC,Tinggi,Konsleting,Perbaikan Jaringan
+Motor pompa air utama sangat panas dan mati sendiri,"Motor pompa mengalami overheat karena beban berlebih, sudah diganti part.",Pompa Air,Tinggi,Overheat,Penggantian Part
+"Panel listrik utama sangat panas, ada bau gosong samar","Terminal konektor longgar menyebabkan overheat, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+"Mesin pabrik ini sudah sangat tua, sering rusak dan susah cari sparepart","Komponen utama mesin sudah habis masa pakainya, perlu penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+"AC di ruang direksi berisik banget suaranya, dinginnya juga kurang","Motor fan outdoor AC aus dan berisik, sudah dilakukan penggantian part baru.",HVAC,Sedang,Keausan,Penggantian Part
+"Tekanan air di lantai atas pabrik sangat lemah, air tidak sampai","Pipa isap pompa tersumbat kotoran, sudah dibersihkan.",Pompa Air,Rendah,Tersumbat,Pembersihan
+"Listrik di seluruh area produksi tiba-tiba mati total, ada bau hangus","Terjadi hubungan arus pendek pada jalur listrik di area produksi, sudah perbaikan jaringan kabel.",Kelistrikan,Tinggi,Konsleting,Perbaikan Jaringan
+Ada suara gesekan keras dari mesin conveyor,"Bearing pada shaft utama mesin aus, perlu penggantian part.",Mesin Produksi,Tinggi,Keausan,Penggantian Part
+Unit AC di server room mengeluarkan bau apek dan ada tetesan air,"Sistem drainase AC tersumbat, kotoran sudah dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air bocor terus dari sealnya,"Bearing motor pompa aus dan kering, sudah dilakukan pelumasan.",Pompa Air,Sedang,Keausan,Pelumasan
+"Debu tebal di panel listrik, takut konslet","Debu dan kotoran menumpuk di dalam panel distribusi, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+"Mesin pengaduk tiba-tiba mati total, ada bau gosong dari panelnya","Papan sirkuit kontrol PLC mesin terbakar akibat hubung singkat, sudah diganti part baru.",Mesin Produksi,Tinggi,Konsleting,Penggantian Part
+"AC di ruang rapat sudah tua, dinginnya tidak maksimal lagi","Unit kompresor AC sudah sangat tua, perlu penggantian part baru.",HVAC,Tinggi,Usia Pakai,Penggantian Part
+Pompa air sering trip karena panas berlebih,"Gulungan motor pompa terbakar karena panas, sudah diganti part baru.",Pompa Air,Tinggi,Overheat,Penggantian Part
+Kabel listrik di mesin A terasa panas saat disentuh,"Kabel utama panel listrik mengalami overheat karena beban berlebih, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+Performa mesin pengemas menurun drastis dalam beberapa tahun terakhir,"Komponen utama mesin sudah habis masa pakainya, perlu penggantian part.",Mesin Produksi,Sedang,Usia Pakai,Penggantian Part
+Air AC bocor di area kantor admin,"Saluran pembuangan unit AC mampet karena lumut dan debu, sudah disemprot dan dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+"Tekanan air pompa tidak stabil, sering naik turun","Impeller pompa aus, tidak mampu memompa air maksimal, sudah diganti part baru.",Pompa Air,Sedang,Keausan,Penggantian Part
+"MCB di panel utama sering trip, padahal tidak ada beban berlebih","MCB di panel distribusi sudah habis usia pakainya, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+"Saluran oli hidrolik tersumbat, tekanan menurun","Filter oli hidrolik mampet, sudah dilakukan pembersihan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+MCB AC di lantai 3 sering jatuh sendiri,"Kapasitor AC terbakar akibat konsleting, sudah diganti part baru.",HVAC,Tinggi,Konsleting,Penggantian Part
+"Pompa air tidak mau nyala, MCB utama jeglek","Terjadi konsleting pada kabel motor pompa, sudah perbaikan jaringan.",Pompa Air,Tinggi,Konsleting,Perbaikan Jaringan
+Stop kontak di ruang istirahat meleleh,"Komponen proteksi di panel listrik overheat dan rusak, sudah diganti part baru.",Kelistrikan,Tinggi,Overheat,Penggantian Part
+"Suhu mesin melebihi batas normal, sering mati sendiri","Motor mesin produksi mengalami overheat karena beban berlebih, sudah diganti part.",Mesin Produksi,Tinggi,Overheat,Penggantian Part
+AC mengeluarkan suara mendecit saat dinyalakan,"Kipas indoor AC mulai aus, sudah dilakukan penggantian part.",HVAC,Sedang,Keausan,Penggantian Part
+Pompa terasa getarannya tidak normal,"Kopling motor pompa aus, perlu penggantian part.",Pompa Air,Sedang,Keausan,Penggantian Part
+"Semua instalasi listrik di gudang sudah sangat tua, perlu peremajaan","Kabel instalasi listrik sudah tua dan rapuh, disarankan penggantian part.",Kelistrikan,Tinggi,Usia Pakai,Penggantian Part
+Belt penggerak mesin sering selip dan berisik,"Belt conveyor aus dan kendur, sudah diganti part baru.",Mesin Produksi,Sedang,Keausan,Penggantian Part
+"AC di ruang kontrol sering mati sendiri, padahal sudah diservis","Kompresor AC mengalami overheat, diduga karena sirkulasi freon kurang optimal, sudah dikalibrasi ulang.",HVAC,Tinggi,Overheat,Kalibrasi
+Pompa mengeluarkan bau gosong setelah dipakai lama,"Sensor suhu pompa memberikan bacaan tidak akurat, menyebabkan overheat proteksi, sudah dikalibrasi.",Pompa Air,Sedang,Overheat,Kalibrasi
+"Kotoran di dalam MCB, sering trip tidak jelas","Terminal konektor kotor dan berkarat, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+Motor mesin utama sangat panas dan ada bau aneh,"Motor mesin produksi mengalami overheat karena beban berlebih, sudah diganti part.",Mesin Produksi,Tinggi,Overheat,Penggantian Part
+AC sudah sering diservis tapi masalahnya muncul lagi,"Papan sirkuit kontrol AC sudah rapuh, perlu penggantian part.",HVAC,Sedang,Usia Pakai,Penggantian Part
+Air tidak keluar sama sekali,"Impeller pompa terhalang sampah, sudah dibersihkan.",Pompa Air,Sedang,Tersumbat,Pembersihan
+"Stop kontak di area packing longgar, sering mati sendiri","Terminal stop kontak aus, sudah diganti part baru.",Kelistrikan,Sedang,Keausan,Penggantian Part
+"Produk hasil cetakan tidak presisi, mungkin karena ada bagian mesin aus","Pisau pemotong mesin aus, sudah diganti part baru.",Mesin Produksi,Tinggi,Keausan,Penggantian Part
+Unit AC di server room mengeluarkan bau apek dan ada tetesan air,"Unit indoor AC tersumbat debu tebal, sudah dibersihkan menyeluruh.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air bocor terus dari sealnya,"Seal mekanis pompa bocor akibat keausan, perlu penggantian part.",Pompa Air,Tinggi,Keausan,Penggantian Part
+"Saluran ventilasi panel tertutup debu, panel panas","Ventilasi panel utama tersumbat debu tebal, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+"Mesin pengaduk tiba-tiba mati total, ada bau gosong dari panelnya","Relay proteksi mesin terbakar akibat konsleting, sudah diganti part baru.",Mesin Produksi,Tinggi,Konsleting,Penggantian Part
+Ada percikan api di sekitar kabel AC,"Terminal konektor AC meleleh karena konsleting, sudah diganti part baru.",HVAC,Tinggi,Konsleting,Penggantian Part
+Pompa air mati total dan tercium bau terbakar,"Papan sirkuit kontrol pompa terbakar akibat hubung singkat, sudah diganti part baru.",Pompa Air,Tinggi,Konsleting,Penggantian Part
+MCB di panel sering trip dan panas,"Kabel utama panel listrik mengalami overheat karena beban berlebih, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+"Mesin sudah beroperasi lebih dari 20 tahun, perlu peremajaan","Motor penggerak mesin sudah melewati usia pakai, sudah dilakukan penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+Filter AC terlihat sangat kotor dan debunya tebal,"Filter AC kotor dan menghambat aliran udara, sudah dibersihkan dan diganti jika perlu.",HVAC,Rendah,Tersumbat,Pembersihan
+Pipa input pompa tersumbat kotoran,"Pipa isap pompa tersumbat kotoran, sudah dibersihkan.",Pompa Air,Rendah,Tersumbat,Pembersihan
+Terminal listrik terlihat kotor dan berkarat,"Terminal konektor kotor dan berkarat, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+Nozzle semprotan mesin tidak keluar cairan,"Nozzle semprotan mesin tersumbat, sudah dibersihkan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+"Fan AC tidak berputar kencang, hanya pelan","Kipas indoor AC mulai aus, sudah dilakukan penggantian part.",HVAC,Sedang,Keausan,Penggantian Part
+Sistem penggerak pompa terdengar bergesek,"Kopling motor pompa aus, perlu penggantian part.",Pompa Air,Sedang,Keausan,Penggantian Part
+Kabel di area produksi terlihat mengelupas dan usang,"Kabel instalasi listrik di area produksi mengalami keausan, sudah perbaikan jaringan.",Kelistrikan,Sedang,Keausan,Perbaikan Jaringan
+Komponen bergerak mesin terlihat oblak,"Bearing pada shaft utama mesin aus, perlu penggantian part.",Mesin Produksi,Sedang,Keausan,Penggantian Part
+Kompresor AC terasa sangat panas saat disentuh,"Kompresor AC mengalami overheat, diduga karena sirkulasi freon kurang optimal, sudah dikalibrasi ulang.",HVAC,Tinggi,Overheat,Kalibrasi
+Suara pompa terdengar aneh dan panas sekali,"Motor pompa mengalami overheat karena beban berlebih, sudah diganti part.",Pompa Air,Tinggi,Overheat,Penggantian Part
+Terdengar suara mendesis dari panel listrik yang panas,"Terminal konektor longgar menyebabkan overheat, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+Panel kontrol mesin terasa panas sekali,"Ventilasi kabinet kontrol mesin tersumbat, menyebabkan komponen overheat, sudah dibersihkan.",Mesin Produksi,Sedang,Overheat,Pembersihan
+AC sudah lebih dari 10 tahun dan sering rusak,"Papan sirkuit kontrol AC sudah rapuh, perlu penggantian part.",HVAC,Tinggi,Usia Pakai,Penggantian Part
+Pompa sering macet dan perlu di-trigger manual,"Sistem kontrol pompa sudah tua, perlu penggantian part.",Pompa Air,Sedang,Usia Pakai,Penggantian Part
+Panel kontrol terlihat kusam dan tombolnya sudah usang,"Panel kontrol utama sudah usang, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+Komponen elektronik di mesin sering gagal karena usia,"Sistem kontrol PLC mesin sudah usang, disarankan penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+Indikator listrik di AC mati dan tercium bau terbakar,"Terjadi hubungan arus pendek pada kabel power AC, sudah perbaikan jaringan kabel.",HVAC,Tinggi,Konsleting,Perbaikan Jaringan
+"Pompa air tidak mau nyala, MCB utama jeglek","Terjadi konsleting pada kabel motor pompa, sudah perbaikan jaringan.",Pompa Air,Tinggi,Konsleting,Perbaikan Jaringan
+Alarm kebakaran berbunyi karena ada asap dari panel listrik,"Isolasi kabel terkelupas menyebabkan konsleting, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Konsleting,Perbaikan Jaringan
+"Semua indikator di mesin mati total, ada bau aneh","Kabel sensor mesin mengalami konsleting, sudah perbaikan jaringan.",Mesin Produksi,Tinggi,Konsleting,Perbaikan Jaringan
+AC di ruang meeting lantai 2 netes air terus nih,"Saluran pembuangan unit AC mampet karena lumut dan debu, sudah disemprot dan dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air utama mengeluarkan suara berisik dan kasar,"Bearing motor pompa aus dan berisik, sudah diganti part baru.",Pompa Air,Tinggi,Keausan,Penggantian Part
+Lampu di gudang mati total,"MCB di panel distribusi sudah habis usia pakainya, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+"Mesin pengemas macet, produk tidak bisa lewat","Saluran feed material mesin tersumbat residu, sudah dibersihkan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+AC di lab kimia tiba-tiba mati total dan ada bau gosong,"Terjadi hubungan arus pendek pada kabel power AC, sudah perbaikan jaringan kabel.",HVAC,Tinggi,Konsleting,Perbaikan Jaringan
+Motor pompa air utama sangat panas dan mati sendiri,"Motor pompa mengalami overheat karena beban berlebih, sudah diganti part.",Pompa Air,Tinggi,Overheat,Penggantian Part
+"Panel listrik utama sangat panas, ada bau gosong samar","Terminal konektor longgar menyebabkan overheat, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+"Mesin pabrik ini sudah sangat tua, sering rusak dan susah cari sparepart","Komponen utama mesin sudah habis masa pakainya, perlu penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+"AC di ruang direksi berisik banget suaranya, dinginnya juga kurang","Motor fan outdoor AC aus dan berisik, sudah dilakukan penggantian part baru.",HVAC,Sedang,Keausan,Penggantian Part
+"Tekanan air di lantai atas pabrik sangat lemah, air tidak sampai","Pipa isap pompa tersumbat kotoran, sudah dibersihkan.",Pompa Air,Rendah,Tersumbat,Pembersihan
+"Listrik di seluruh area produksi tiba-tiba mati total, ada bau hangus","Terjadi hubungan arus pendek pada jalur listrik di area produksi, sudah perbaikan jaringan kabel.",Kelistrikan,Tinggi,Konsleting,Perbaikan Jaringan
+Ada suara gesekan keras dari mesin conveyor,"Bearing pada shaft utama mesin aus, perlu penggantian part.",Mesin Produksi,Tinggi,Keausan,Penggantian Part
+Unit AC di server room mengeluarkan bau apek dan ada tetesan air,"Sistem drainase AC tersumbat, kotoran sudah dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air bocor terus dari sealnya,"Bearing motor pompa aus dan kering, sudah dilakukan pelumasan.",Pompa Air,Sedang,Keausan,Pelumasan
+"Debu tebal di panel listrik, takut konslet","Debu dan kotoran menumpuk di dalam panel distribusi, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+"Mesin pengaduk tiba-tiba mati total, ada bau gosong dari panelnya","Papan sirkuit kontrol PLC mesin terbakar akibat hubung singkat, sudah diganti part baru.",Mesin Produksi,Tinggi,Konsleting,Penggantian Part
+"AC di ruang rapat sudah tua, dinginnya tidak maksimal lagi","Unit kompresor AC sudah sangat tua, perlu penggantian part baru.",HVAC,Tinggi,Usia Pakai,Penggantian Part
+Pompa air sering trip karena panas berlebih,"Gulungan motor pompa terbakar karena panas, sudah diganti part baru.",Pompa Air,Tinggi,Overheat,Penggantian Part
+Kabel listrik di mesin A terasa panas saat disentuh,"Kabel utama panel listrik mengalami overheat karena beban berlebih, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+Performa mesin pengemas menurun drastis dalam beberapa tahun terakhir,"Komponen utama mesin sudah habis masa pakainya, perlu penggantian part.",Mesin Produksi,Sedang,Usia Pakai,Penggantian Part
+Air AC bocor di area kantor admin,"Saluran pembuangan unit AC mampet karena lumut dan debu, sudah disemprot dan dibersihkan.",HVAC,Sedang,Tersumbat,Pembersihan
+"Tekanan air pompa tidak stabil, sering naik turun","Impeller pompa aus, tidak mampu memompa air maksimal, sudah diganti part baru.",Pompa Air,Sedang,Keausan,Penggantian Part
+"MCB di panel utama sering trip, padahal tidak ada beban berlebih","MCB di panel distribusi sudah habis usia pakainya, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+"Saluran oli hidrolik tersumbat, tekanan menurun","Filter oli hidrolik mampet, sudah dilakukan pembersihan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+MCB AC di lantai 3 sering jatuh sendiri,"Kapasitor AC terbakar akibat konsleting, sudah diganti part baru.",HVAC,Tinggi,Konsleting,Penggantian Part
+"Pompa air tidak mau nyala, MCB utama jeglek","Terjadi konsleting pada kabel motor pompa, sudah perbaikan jaringan.",Pompa Air,Tinggi,Konsleting,Perbaikan Jaringan
+Stop kontak di ruang istirahat meleleh,"Komponen proteksi di panel listrik overheat dan rusak, sudah diganti part baru.",Kelistrikan,Tinggi,Overheat,Penggantian Part
+"Suhu mesin melebihi batas normal, sering mati sendiri","Motor mesin produksi mengalami overheat karena beban berlebih, sudah diganti part.",Mesin Produksi,Tinggi,Overheat,Penggantian Part
+AC mengeluarkan suara mendecit saat dinyalakan,"Kipas indoor AC mulai aus, sudah dilakukan penggantian part.",HVAC,Sedang,Keausan,Penggantian Part
+Pompa terasa getarannya tidak normal,"Kopling motor pompa aus, perlu penggantian part.",Pompa Air,Sedang,Keausan,Penggantian Part
+"Semua instalasi listrik di gudang sudah sangat tua, perlu peremajaan","Kabel instalasi listrik sudah tua dan rapuh, disarankan penggantian part.",Kelistrikan,Tinggi,Usia Pakai,Penggantian Part
+Belt penggerak mesin sering selip dan berisik,"Belt conveyor aus dan kendur, sudah diganti part baru.",Mesin Produksi,Sedang,Keausan,Penggantian Part
+"AC di ruang kontrol sering mati sendiri, padahal sudah diservis","Kompresor AC mengalami overheat, diduga karena sirkulasi freon kurang optimal, sudah dikalibrasi ulang.",HVAC,Tinggi,Overheat,Kalibrasi
+Pompa mengeluarkan bau gosong setelah dipakai lama,"Sensor suhu pompa memberikan bacaan tidak akurat, menyebabkan overheat proteksi, sudah dikalibrasi.",Pompa Air,Sedang,Overheat,Kalibrasi
+"Kotoran di dalam MCB, sering trip tidak jelas","Terminal konektor kotor dan berkarat, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+Motor mesin utama sangat panas dan ada bau aneh,"Motor mesin produksi mengalami overheat karena beban berlebih, sudah diganti part.",Mesin Produksi,Tinggi,Overheat,Penggantian Part
+AC sudah sering diservis tapi masalahnya muncul lagi,"Papan sirkuit kontrol AC sudah rapuh, perlu penggantian part.",HVAC,Sedang,Usia Pakai,Penggantian Part
+Air tidak keluar sama sekali,"Impeller pompa terhalang sampah, sudah dibersihkan.",Pompa Air,Sedang,Tersumbat,Pembersihan
+"Stop kontak di area packing longgar, sering mati sendiri","Terminal stop kontak aus, sudah diganti part baru.",Kelistrikan,Sedang,Keausan,Penggantian Part
+"Produk hasil cetakan tidak presisi, mungkin karena ada bagian mesin aus","Pisau pemotong mesin aus, sudah diganti part baru.",Mesin Produksi,Tinggi,Keausan,Penggantian Part
+Unit AC di server room mengeluarkan bau apek dan ada tetesan air,"Unit indoor AC tersumbat debu tebal, sudah dibersihkan menyeluruh.",HVAC,Sedang,Tersumbat,Pembersihan
+Pompa air bocor terus dari sealnya,"Seal mekanis pompa bocor akibat keausan, perlu penggantian part.",Pompa Air,Tinggi,Keausan,Penggantian Part
+"Saluran ventilasi panel tertutup debu, panel panas","Ventilasi panel utama tersumbat debu tebal, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+"Mesin pengaduk tiba-tiba mati total, ada bau gosong dari panelnya","Relay proteksi mesin terbakar akibat konsleting, sudah diganti part baru.",Mesin Produksi,Tinggi,Konsleting,Penggantian Part
+Ada percikan api di sekitar kabel AC,"Terminal konektor AC meleleh karena konsleting, sudah diganti part baru.",HVAC,Tinggi,Konsleting,Penggantian Part
+Pompa air mati total dan tercium bau terbakar,"Papan sirkuit kontrol pompa terbakar akibat hubung singkat, sudah diganti part baru.",Pompa Air,Tinggi,Konsleting,Penggantian Part
+MCB di panel sering trip dan panas,"Kabel utama panel listrik mengalami overheat karena beban berlebih, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+"Mesin sudah beroperasi lebih dari 20 tahun, perlu peremajaan","Motor penggerak mesin sudah melewati usia pakai, sudah dilakukan penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+Filter AC terlihat sangat kotor dan debunya tebal,"Filter AC kotor dan menghambat aliran udara, sudah dibersihkan dan diganti jika perlu.",HVAC,Rendah,Tersumbat,Pembersihan
+Pipa input pompa tersumbat kotoran,"Pipa isap pompa tersumbat kotoran, sudah dibersihkan.",Pompa Air,Rendah,Tersumbat,Pembersihan
+Terminal listrik terlihat kotor dan berkarat,"Terminal konektor kotor dan berkarat, sudah dibersihkan.",Kelistrikan,Rendah,Tersumbat,Pembersihan
+Nozzle semprotan mesin tidak keluar cairan,"Nozzle semprotan mesin tersumbat, sudah dibersihkan.",Mesin Produksi,Sedang,Tersumbat,Pembersihan
+"Fan AC tidak berputar kencang, hanya pelan","Kipas indoor AC mulai aus, sudah dilakukan penggantian part.",HVAC,Sedang,Keausan,Penggantian Part
+Sistem penggerak pompa terdengar bergesek,"Kopling motor pompa aus, perlu penggantian part.",Pompa Air,Sedang,Keausan,Penggantian Part
+Kabel di area produksi terlihat mengelupas dan usang,"Kabel instalasi listrik di area produksi mengalami keausan, sudah perbaikan jaringan.",Kelistrikan,Sedang,Keausan,Perbaikan Jaringan
+Komponen bergerak mesin terlihat oblak,"Bearing pada shaft utama mesin aus, perlu penggantian part.",Mesin Produksi,Sedang,Keausan,Penggantian Part
+Kompresor AC terasa sangat panas saat disentuh,"Kompresor AC mengalami overheat, diduga karena sirkulasi freon kurang optimal, sudah dikalibrasi ulang.",HVAC,Tinggi,Overheat,Kalibrasi
+Suara pompa terdengar aneh dan panas sekali,"Motor pompa mengalami overheat karena beban berlebih, sudah diganti part.",Pompa Air,Tinggi,Overheat,Penggantian Part
+Terdengar suara mendesis dari panel listrik yang panas,"Terminal konektor longgar menyebabkan overheat, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Overheat,Perbaikan Jaringan
+Panel kontrol mesin terasa panas sekali,"Ventilasi kabinet kontrol mesin tersumbat, menyebabkan komponen overheat, sudah dibersihkan.",Mesin Produksi,Sedang,Overheat,Pembersihan
+AC sudah lebih dari 10 tahun dan sering rusak,"Papan sirkuit kontrol AC sudah rapuh, perlu penggantian part.",HVAC,Tinggi,Usia Pakai,Penggantian Part
+Pompa sering macet dan perlu di-trigger manual,"Sistem kontrol pompa sudah tua, perlu penggantian part.",Pompa Air,Sedang,Usia Pakai,Penggantian Part
+Panel kontrol terlihat kusam dan tombolnya sudah usang,"Panel kontrol utama sudah usang, perlu penggantian part.",Kelistrikan,Sedang,Usia Pakai,Penggantian Part
+Komponen elektronik di mesin sering gagal karena usia,"Sistem kontrol PLC mesin sudah usang, disarankan penggantian part.",Mesin Produksi,Tinggi,Usia Pakai,Penggantian Part
+Indikator listrik di AC mati dan tercium bau terbakar,"Terjadi hubungan arus pendek pada kabel power AC, sudah perbaikan jaringan kabel.",HVAC,Tinggi,Konsleting,Perbaikan Jaringan
+"Pompa air tidak mau nyala, MCB utama jeglek","Terjadi konsleting pada kabel motor pompa, sudah perbaikan jaringan.",Pompa Air,Tinggi,Konsleting,Perbaikan Jaringan
+Alarm kebakaran berbunyi karena ada asap dari panel listrik,"Isolasi kabel terkelupas menyebabkan konsleting, sudah perbaikan jaringan.",Kelistrikan,Tinggi,Konsleting,Perbaikan Jaringan
+"Semua indikator di mesin mati total, ada bau aneh","Kabel sensor mesin mengalami konsleting, sudah perbaikan jaringan.",Mesin Produksi,Tinggi,Konsleting,Perbaikan Jaringan
