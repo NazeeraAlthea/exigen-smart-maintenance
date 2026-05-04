@@ -74,7 +74,7 @@ EXIGEN-PREDICTIVE-MAINTENANCE/
 Clone repositori ini dan masuk ke dalam direktori proyek:
 
 ```
-git clone [https://github.com/UsernameAnda/exigen-smart-maintenance.git](https://github.com/UsernameAnda/exigen-smart-maintenance.git)
+git clone [https://github.com/NazeeraAlthea/exigen-smart-maintenance.git](https://github.com/NazeeraAlthea/exigen-smart-maintenance.git)
 cd exigen-smart-maintenance
 ```
 Buat virtual environment dan instal dependensi (Disarankan menggunakan Python 3.11+):
@@ -106,4 +106,3 @@ Jose Febryan Limbor - Interval Classifier Engineer
 Najma Gusti Ayu Mahesa - Cost Estimator Engineer
 
 © 2026 Exigen Smart Maintenance. All rights reserved.
-"""
