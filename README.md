@@ -1,4 +1,4 @@
-md_content = """# 🚀 Exigen: Intelligent Asset Management & Predictive Maintenance
+# 🚀 Exigen: Intelligent Asset Management & Predictive Maintenance
 
 ![Python Version](https://img.shields.io/badge/Python-3.11.9-blue.svg?logo=python&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Active_Development-success.svg)
