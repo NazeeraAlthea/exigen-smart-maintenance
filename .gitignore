@@ -1,4 +1,62 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ========================
+# Virtual Environment
+# ========================
 /venv
+/.venv
+
+# ========================
+# Environment Variables
+# ========================
 .env
+.env.local
+
+# ========================
+# MLflow
+# ========================
 /mlruns
-*.mlruns
+mlflow.db
+
+# ========================
+# Model Artifacts (file besar, hasil training)
+# ========================
+/models/*.pkl
+/models/*.h5
+/models/*.json
+
+# ========================
+# Node.js (dari xlsx library yg kita install waktu inspect data)
+# ========================
+/node_modules
+package.json
+package-lock.json
+
+# ========================
+# Jupyter Notebook Checkpoints
+# ========================
+.ipynb_checkpoints/
+
+# ========================
+# OS Files
+# ========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========================
+# IDE
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
