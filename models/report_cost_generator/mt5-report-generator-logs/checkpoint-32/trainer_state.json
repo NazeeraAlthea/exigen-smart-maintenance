@@ -1,0 +1,84 @@
+{
+  "best_global_step": 32,
+  "best_metric": 22.91302490234375,
+  "best_model_checkpoint": "../../models/report_cost_generator/mt5-report-generator-logs\\checkpoint-32",
+  "epoch": 1.0,
+  "eval_steps": 500,
+  "global_step": 32,
+  "is_hyper_param_search": false,
+  "is_local_process_zero": true,
+  "is_world_process_zero": true,
+  "log_history": [
+    {
+      "epoch": 0.15625,
+      "grad_norm": 706.6154174804688,
+      "learning_rate": 0.000975,
+      "loss": 44.437075805664065,
+      "step": 5
+    },
+    {
+      "epoch": 0.3125,
+      "grad_norm": 10722.818359375,
+      "learning_rate": 0.00094375,
+      "loss": 44.2014404296875,
+      "step": 10
+    },
+    {
+      "epoch": 0.46875,
+      "grad_norm": 638.3428955078125,
+      "learning_rate": 0.0009125,
+      "loss": 41.51741943359375,
+      "step": 15
+    },
+    {
+      "epoch": 0.625,
+      "grad_norm": 280.459716796875,
+      "learning_rate": 0.00088125,
+      "loss": 38.7101806640625,
+      "step": 20
+    },
+    {
+      "epoch": 0.78125,
+      "grad_norm": 571.9683227539062,
+      "learning_rate": 0.00085,
+      "loss": 35.54329223632813,
+      "step": 25
+    },
+    {
+      "epoch": 0.9375,
+      "grad_norm": 552.7066650390625,
+      "learning_rate": 0.00081875,
+      "loss": 32.7219970703125,
+      "step": 30
+    },
+    {
+      "epoch": 1.0,
+      "eval_loss": 22.91302490234375,
+      "eval_runtime": 6.2884,
+      "eval_samples_per_second": 3.658,
+      "eval_steps_per_second": 0.954,
+      "step": 32
+    }
+  ],
+  "logging_steps": 5,
+  "max_steps": 160,
+  "num_input_tokens_seen": 0,
+  "num_train_epochs": 5,
+  "save_steps": 500,
+  "stateful_callbacks": {
+    "TrainerControl": {
+      "args": {
+        "should_epoch_stop": false,
+        "should_evaluate": false,
+        "should_log": false,
+        "should_save": true,
+        "should_training_stop": false
+      },
+      "attributes": {}
+    }
+  },
+  "total_flos": 16821361311744.0,
+  "train_batch_size": 4,
+  "trial_name": null,
+  "trial_params": null
+}
