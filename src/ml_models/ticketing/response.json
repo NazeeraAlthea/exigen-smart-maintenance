@@ -1,0 +1,13 @@
+{
+  "status_proses": "Sukses",
+  "tiket_id": "TKT-202605-001",
+  "hasil_prediksi_ai": {
+    "tipe_aset": "AC Split",
+    "lokasi_gedung": "Gedung Utama",
+    "lokasi_lantai": "Lantai 2",
+    "lokasi_zona": "Ruang HRD",
+    "kategori_departemen": "HVAC",
+    "tingkat_severity": "Sedang"
+  },
+  "saran_tindakan_sistem": "Segera jadwalkan inspeksi teknisi HVAC ke area terkait"
+}
