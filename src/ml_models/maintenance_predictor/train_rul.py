@@ -43,29 +43,16 @@ def main():
     df_ganti['Tanggal Penggantian'] = pd.to_datetime(df_ganti['Tanggal Penggantian'], format='%d-%m-%Y', errors='coerce')
     df_komplain = df_komplain.dropna(subset=['Tanggal Pengerjaan'])
     
-    print("=== FILTER PENGGANTIAN VALID ===")
-    administrative_keywords = ['upgrade', 'standar', 'kontrak', 'spare']
-    pattern = '|'.join(administrative_keywords)
-    mask_valid = ~df_ganti['Alasan Penggantian'].str.contains(pattern, case=False, na=False)
-    df_ganti_valid = df_ganti[mask_valid].copy()
-    
-    # Ambil tanggal penggantian valid per ID (jika ganti berkali-kali ambil yang pertama saja)
-    df_ganti_valid = df_ganti_valid.dropna(subset=['Tanggal Penggantian']).sort_values('Tanggal Penggantian').drop_duplicates(subset=['ID'])
-    
-    print("=== FILTER KOMPLAIN HANTU ===")
-    # Hanya keep komplain yang terjadi SEBELUM tanggal penggantian aset
-    df_komplain_valid = pd.merge(df_komplain, df_ganti_valid[['ID', 'Tanggal Penggantian']], on='ID', how='inner')
-    df_komplain_valid = df_komplain_valid[df_komplain_valid['Tanggal Pengerjaan'] <= df_komplain_valid['Tanggal Penggantian']].copy()
-    
+    print("=== FEATURE ENGINEERING ===")
     sev_map = {'Ringan': 1, 'Sedang': 2, 'Berat': 3, 'Fatal': 4, 'Rendah': 1, 'Tinggi': 3, 'Kritis': 4, 'Low': 1, 'Medium': 2, 'High': 3, 'Critical': 4}
-    df_komplain_valid['Severity_Num'] = df_komplain_valid['Severity'].map(sev_map).fillna(1)
+    df_komplain['Severity_Num'] = df_komplain['Severity'].map(sev_map).fillna(1)
     
-    df_komplain_valid = df_komplain_valid.sort_values(by=['ID', 'Tanggal Pengerjaan'])
-    df_komplain_valid['Hari_Antar_Komplain'] = df_komplain_valid.groupby('ID')['Tanggal Pengerjaan'].diff().dt.days
+    df_komplain = df_komplain.sort_values(by=['ID', 'Tanggal Pengerjaan'])
+    df_komplain['Hari_Antar_Komplain'] = df_komplain.groupby('ID')['Tanggal Pengerjaan'].diff().dt.days
     
-    first_complaint = df_komplain_valid.groupby('ID')['Tanggal Pengerjaan'].min().reset_index()
+    first_complaint = df_komplain.groupby('ID')['Tanggal Pengerjaan'].min().reset_index()
     first_complaint.columns = ['ID', 'Tanggal_Komplain_Pertama']
-    last_complaint = df_komplain_valid.groupby('ID')['Tanggal Pengerjaan'].max().reset_index()
+    last_complaint = df_komplain.groupby('ID')['Tanggal Pengerjaan'].max().reset_index()
     last_complaint.columns = ['ID', 'Tanggal_Komplain_Terakhir']
     
     agg_funcs = {
@@ -74,48 +61,48 @@ def main():
         'Biaya Perbaikan': ['sum', 'mean'],
         'Hari_Antar_Komplain': 'mean'
     }
-    df_komplain_agg = df_komplain_valid.groupby('ID').agg(agg_funcs)
+    df_komplain_agg = df_komplain.groupby('ID').agg(agg_funcs)
     df_komplain_agg.columns = ['Total_Komplain', 'Severity_Mean', 'Severity_Max', 'Biaya_Total', 'Biaya_Mean', 'Hari_Antar_Komplain_Mean']
     df_komplain_agg = df_komplain_agg.reset_index()
     
     df_komplain_agg = pd.merge(df_komplain_agg, first_complaint, on='ID', how='left')
     df_komplain_agg = pd.merge(df_komplain_agg, last_complaint, on='ID', how='left')
     
-    print("=== LABELING DATA ===")
-    df_labeled = df_ganti_valid[['ID', 'Tanggal Penggantian']].copy()
+    administrative_keywords = ['upgrade', 'standar', 'kontrak', 'efisiensi']
+    pattern = '|'.join(administrative_keywords)
+    mask_valid = ~df_ganti['Alasan Penggantian'].str.contains(pattern, case=False, na=False)
+    df_ganti_valid = df_ganti[mask_valid].copy()
+    
+    df_labeled = df_ganti_valid.dropna(subset=['Tanggal Penggantian']).drop_duplicates(subset=['ID'])[['ID', 'Tanggal Penggantian']]
     df_labeled = pd.merge(df_labeled, df_master[['ID', 'Tanggal Instalasi', 'Kategori', 'Sub Kategori', 'Tipe', 'Merek', 'Tingkat Kekritisan']], on='ID', how='inner')
     
     df_labeled['Umur_Aset_Total_Hari'] = (df_labeled['Tanggal Penggantian'] - df_labeled['Tanggal Instalasi']).dt.days
     df_labeled = df_labeled.dropna(subset=['Umur_Aset_Total_Hari'])
     df_labeled = df_labeled[df_labeled['Umur_Aset_Total_Hari'] > 0]
     
-    # GABUNG HISTORI KOMPLAIN VALID
-    df_labeled = pd.merge(df_labeled, df_komplain_agg, on='ID', how='left')
-    
-    # BUANG ASET YANG MATI MENDADAK TANPA KOMPLAIN (Hanya pakai aset yang ada data komplain validnya)
-    df_labeled = df_labeled.dropna(subset=['Total_Komplain'])
-    print(f"Total Aset Emas (Punya Komplain & Mati Natural) siap latih: {len(df_labeled)}")
-    
-    # Filter Outlier pada target RUL
     Q1 = df_labeled['Umur_Aset_Total_Hari'].quantile(0.25)
     Q3 = df_labeled['Umur_Aset_Total_Hari'].quantile(0.75)
     IQR = Q3 - Q1
     lower_bound = Q1 - 1.5 * IQR
     upper_bound = Q3 + 1.5 * IQR
     df_labeled = df_labeled[(df_labeled['Umur_Aset_Total_Hari'] >= lower_bound) & (df_labeled['Umur_Aset_Total_Hari'] <= upper_bound)]
-    print(f"Total Aset setelah filter outlier: {len(df_labeled)}")
     
     df_frek_unik = df_frek.drop_duplicates(subset=['Kategori', 'Sub Kategori', 'Tipe'])
     df_labeled = pd.merge(df_labeled, df_frek_unik[['Kategori', 'Sub Kategori', 'Tipe', 'Frekuensi']], on=['Kategori', 'Sub Kategori', 'Tipe'], how='left')
+    df_labeled = pd.merge(df_labeled, df_komplain_agg, on='ID', how='left')
     
     # --- SMART FEATURE ENGINEERING ---
+    
+    # 1. Parsing Frekuensi
     df_labeled['Frekuensi_Hari'] = df_labeled['Frekuensi'].apply(parse_frekuensi)
     
+    # 2. Complaint Velocity
     df_labeled['Durasi_Aktif_Komplain'] = (df_labeled['Tanggal_Komplain_Terakhir'] - df_labeled['Tanggal_Komplain_Pertama']).dt.days
     df_labeled['Durasi_Aktif_Komplain'] = df_labeled['Durasi_Aktif_Komplain'].replace(0, 1) # Mencegah pembagian dengan 0
     df_labeled['Complaint_Velocity'] = df_labeled['Total_Komplain'].fillna(0) / df_labeled['Durasi_Aktif_Komplain']
     df_labeled['Complaint_Velocity'] = df_labeled['Complaint_Velocity'].fillna(0)
     
+    # 3. Cost Deviation
     mean_cost_tipe = df_labeled.groupby('Tipe')['Biaya_Total'].transform('mean')
     mean_cost_tipe = mean_cost_tipe.replace(0, 1) # Mencegah pembagian dengan 0
     df_labeled['Cost_Deviation_Ratio'] = df_labeled['Biaya_Total'].fillna(0) / mean_cost_tipe
@@ -136,7 +123,7 @@ def main():
                'Kategori', 'Sub Kategori', 'Tipe', 'Merek', 'Tingkat Kekritisan', 'Umur_Saat_Komplain_Terakhir',
                'Frekuensi_Hari', 'Complaint_Velocity', 'Cost_Deviation_Ratio']
     
-    print("\n=== TRAINING XGBOOST RUL PURE (DENGAN HYPERPARAMETER TUNING) ===")
+    print("\n=== TRAINING XGBOOST (DENGAN HYPERPARAMETER TUNING) ===")
     df_labeled = df_labeled.sort_values(by='Tanggal Penggantian').reset_index(drop=True)
     split_idx = int(len(df_labeled) * 0.8)
     df_train = df_labeled.iloc[:split_idx].copy()
@@ -145,7 +132,7 @@ def main():
     kat_cols = ['Kategori', 'Sub Kategori', 'Tipe', 'Merek', 'Tingkat Kekritisan']
     
     mlflow.set_tracking_uri("sqlite:///mlflow.db")
-    mlflow.set_experiment("Maintenance_Predictor_RUL_Pure")
+    mlflow.set_experiment("Maintenance_Predictor_Tuned_v3")
     
     with mlflow.start_run():
         encoder = ce.TargetEncoder(cols=kat_cols, smoothing=10)
@@ -160,7 +147,7 @@ def main():
         base_xgb = XGBRegressor(objective='reg:absoluteerror', random_state=42)
         
         param_dist = {
-            'n_estimators': [50, 100, 200, 300],
+            'n_estimators': [100, 200, 300, 500],
             'learning_rate': [0.01, 0.05, 0.1, 0.2],
             'max_depth': [3, 4, 5, 7],
             'subsample': [0.6, 0.8, 1.0],
@@ -169,7 +156,7 @@ def main():
             'reg_lambda': [0.1, 1.0, 5.0, 10.0]  
         }
         
-        print("Memulai proses Auto-Tuning RUL... Mohon tunggu.")
+        print("Memulai proses Auto-Tuning (RandomizedSearchCV)... Mohon tunggu.")
         random_search = RandomizedSearchCV(
             estimator=base_xgb,
             param_distributions=param_dist,
@@ -188,27 +175,27 @@ def main():
         print(random_search.best_params_)
         
         y_pred_hari = best_xgb_model.predict(X_test)
-        y_test_hari = y_test.values
+        y_test_hari = y_test
         
         mae = mean_absolute_error(y_test_hari, y_pred_hari)
         rmse = np.sqrt(mean_squared_error(y_test_hari, y_pred_hari))
         mape = mean_absolute_percentage_error(y_test_hari, y_pred_hari)
         r2 = r2_score(y_test_hari, y_pred_hari)
         
-        print("\n=== HASIL EVALUASI REAL DATA (PURE RUL) ===")
+        print("\n=== HASIL EVALUASI REAL DATA (TUNED XGBOOST + SMART FEATURES) ===")
         print(f"R-Squared (R2) : {r2:.4f}")
         print(f"MAE            : {mae:.2f} Hari")
         print(f"RMSE           : {rmse:.2f} Hari")
         print(f"MAPE           : {mape * 100:.2f}%")
         
         mlflow.log_params(random_search.best_params_)
-        mlflow.log_params({"model": "XGBRegressor_Pure_RUL", "target_filtering": True, "outlier_removal": "IQR"})
+        mlflow.log_params({"model": "XGBRegressor_Tuned", "target_filtering": True, "outlier_removal": "IQR", "smart_features": True})
         mlflow.log_metrics({"r2": r2, "mae": mae, "rmse": rmse, "mape": mape})
         
         os.makedirs('models', exist_ok=True)
         model_pipeline = {'encoder': encoder, 'model': best_xgb_model, 'features': fitur_x}
-        joblib.dump(model_pipeline, 'models/maintenance_predictor_rul_pure.pkl')
-        print("\nModel pipeline PURE RUL berhasil di-save ke: models/maintenance_predictor_rul_pure.pkl")
+        joblib.dump(model_pipeline, 'models/maintenance_predictor.pkl')
+        print("\nModel pipeline XGBoost Tuned berhasil di-save ke: models/maintenance_predictor.pkl")
 
 if __name__ == '__main__':
     main()
