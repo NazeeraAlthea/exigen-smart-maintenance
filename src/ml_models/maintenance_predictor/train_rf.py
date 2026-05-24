@@ -3,7 +3,7 @@ import re
 import pandas as pd
 import numpy as np
 import category_encoders as ce
-from xgboost import XGBRegressor
+from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.metrics import mean_absolute_error, mean_absolute_percentage_error, mean_squared_error, r2_score
 import joblib
@@ -133,10 +133,10 @@ def main():
     df_labeled['Biaya_Mean_Log'] = np.log1p(df_labeled['Biaya_Mean'])
     
     fitur_x = ['Total_Komplain', 'Severity_Mean', 'Severity_Max', 'Biaya_Total_Log', 'Biaya_Mean_Log', 'Hari_Antar_Komplain_Mean',
-               'Kategori', 'Sub Kategori', 'Tipe', 'Merek', 'Tingkat Kekritisan', 'Umur_Saat_Komplain_Terakhir',
+               'Kategori', 'Sub Kategori', 'Tipe', 'Merek', 'Tingkat Kekritisan',
                'Frekuensi_Hari', 'Complaint_Velocity', 'Cost_Deviation_Ratio']
     
-    print("\n=== TRAINING XGBOOST RUL PURE (DENGAN HYPERPARAMETER TUNING) ===")
+    print("\n=== TRAINING RANDOM FOREST RUL PURE (DENGAN HYPERPARAMETER TUNING) ===")
     df_labeled = df_labeled.sort_values(by='Tanggal Penggantian').reset_index(drop=True)
     split_idx = int(len(df_labeled) * 0.8)
     df_train = df_labeled.iloc[:split_idx].copy()
@@ -145,7 +145,7 @@ def main():
     kat_cols = ['Kategori', 'Sub Kategori', 'Tipe', 'Merek', 'Tingkat Kekritisan']
     
     mlflow.set_tracking_uri("sqlite:///mlflow.db")
-    mlflow.set_experiment("Maintenance_Predictor_RUL_Pure")
+    mlflow.set_experiment("Maintenance_Predictor_RUL_RF")
     
     with mlflow.start_run():
         encoder = ce.TargetEncoder(cols=kat_cols, smoothing=10)
@@ -157,21 +157,19 @@ def main():
         X_test = df_test[fitur_x]
         y_test = df_test['Umur_Aset_Total_Hari']
         
-        base_xgb = XGBRegressor(objective='reg:absoluteerror', random_state=42)
+        base_rf = RandomForestRegressor(random_state=42)
         
         param_dist = {
             'n_estimators': [50, 100, 200, 300],
-            'learning_rate': [0.01, 0.05, 0.1, 0.2],
-            'max_depth': [3, 4, 5, 7],
-            'subsample': [0.6, 0.8, 1.0],
-            'colsample_bytree': [0.6, 0.8, 1.0],
-            'reg_alpha': [0, 0.1, 0.5, 1.0],     
-            'reg_lambda': [0.1, 1.0, 5.0, 10.0]  
+            'max_depth': [None, 3, 5, 7, 10],
+            'min_samples_split': [2, 5, 10],
+            'min_samples_leaf': [1, 2, 4],
+            'max_features': [1.0, 'sqrt', 'log2']
         }
         
-        print("Memulai proses Auto-Tuning RUL... Mohon tunggu.")
+        print("Memulai proses Auto-Tuning RUL (Random Forest)... Mohon tunggu.")
         random_search = RandomizedSearchCV(
-            estimator=base_xgb,
+            estimator=base_rf,
             param_distributions=param_dist,
             n_iter=30,           
             scoring='neg_mean_absolute_error',
@@ -183,11 +181,11 @@ def main():
         
         random_search.fit(X_train, y_train)
         
-        best_xgb_model = random_search.best_estimator_
+        best_rf_model = random_search.best_estimator_
         print("\n[Parameter Terbaik Ditemukan]:")
         print(random_search.best_params_)
         
-        y_pred_hari = best_xgb_model.predict(X_test)
+        y_pred_hari = best_rf_model.predict(X_test)
         y_test_hari = y_test.values
         
         mae = mean_absolute_error(y_test_hari, y_pred_hari)
@@ -195,20 +193,20 @@ def main():
         mape = mean_absolute_percentage_error(y_test_hari, y_pred_hari)
         r2 = r2_score(y_test_hari, y_pred_hari)
         
-        print("\n=== HASIL EVALUASI REAL DATA (PURE RUL) ===")
+        print("\n=== HASIL EVALUASI REAL DATA (RANDOM FOREST PURE RUL) ===")
         print(f"R-Squared (R2) : {r2:.4f}")
         print(f"MAE            : {mae:.2f} Hari")
         print(f"RMSE           : {rmse:.2f} Hari")
         print(f"MAPE           : {mape * 100:.2f}%")
         
         mlflow.log_params(random_search.best_params_)
-        mlflow.log_params({"model": "XGBRegressor_Pure_RUL", "target_filtering": True, "outlier_removal": "IQR"})
+        mlflow.log_params({"model": "RandomForestRegressor_Pure_RUL", "target_filtering": True, "outlier_removal": "IQR"})
         mlflow.log_metrics({"r2": r2, "mae": mae, "rmse": rmse, "mape": mape})
         
         os.makedirs('models', exist_ok=True)
-        model_pipeline = {'encoder': encoder, 'model': best_xgb_model, 'features': fitur_x}
-        joblib.dump(model_pipeline, 'models/maintenance_predictor_rul_pure.pkl')
-        print("\nModel pipeline PURE RUL berhasil di-save ke: models/maintenance_predictor_rul_pure.pkl")
+        model_pipeline = {'encoder': encoder, 'model': best_rf_model, 'features': fitur_x}
+        joblib.dump(model_pipeline, 'models/maintenance_predictor_rul_rf.pkl')
+        print("\nModel pipeline RANDOM FOREST berhasil di-save ke: models/maintenance_predictor_rul_rf.pkl")
 
 if __name__ == '__main__':
     main()
