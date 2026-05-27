@@ -62,3 +62,10 @@ desktop.ini
 *.swo
 
 models/
+
+# Exigen Machine Learning Models Exclusion
+models/ticketing/*.pkl
+models/whisper-large-v3/
+temp_audio/
+*.wav
+*.mp3
