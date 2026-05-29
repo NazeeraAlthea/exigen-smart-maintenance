@@ -3,7 +3,8 @@ import re
 import pandas as pd
 import numpy as np
 import category_encoders as ce
-from xgboost import XGBRegressor
+from sklearn.neural_network import MLPRegressor
+from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.metrics import mean_absolute_error, mean_absolute_percentage_error, mean_squared_error, r2_score
 import joblib
@@ -49,11 +50,9 @@ def main():
     mask_valid = ~df_ganti['Alasan Penggantian'].str.contains(pattern, case=False, na=False)
     df_ganti_valid = df_ganti[mask_valid].copy()
     
-    # Ambil tanggal penggantian valid per ID (jika ganti berkali-kali ambil yang pertama saja)
     df_ganti_valid = df_ganti_valid.dropna(subset=['Tanggal Penggantian']).sort_values('Tanggal Penggantian').drop_duplicates(subset=['ID'])
     
     print("=== FILTER KOMPLAIN HANTU ===")
-    # Hanya keep komplain yang terjadi SEBELUM tanggal penggantian aset
     df_komplain_valid = pd.merge(df_komplain, df_ganti_valid[['ID', 'Tanggal Penggantian']], on='ID', how='inner')
     df_komplain_valid = df_komplain_valid[df_komplain_valid['Tanggal Pengerjaan'] <= df_komplain_valid['Tanggal Penggantian']].copy()
     
@@ -92,7 +91,7 @@ def main():
     # GABUNG HISTORI KOMPLAIN VALID
     df_labeled = pd.merge(df_labeled, df_komplain_agg, on='ID', how='left')
     
-    # BUANG ASET YANG MATI MENDADAK TANPA KOMPLAIN (Hanya pakai aset yang ada data komplain validnya)
+    # BUANG ASET YANG MATI MENDADAK TANPA KOMPLAIN
     df_labeled = df_labeled.dropna(subset=['Total_Komplain'])
     print(f"Total Aset Emas (Punya Komplain & Mati Natural) siap latih: {len(df_labeled)}")
     
@@ -136,7 +135,7 @@ def main():
                'Kategori', 'Sub Kategori', 'Tipe', 'Merek', 'Tingkat Kekritisan', 'Umur_Saat_Komplain_Terakhir',
                'Frekuensi_Hari', 'Complaint_Velocity', 'Cost_Deviation_Ratio']
     
-    print("\n=== TRAINING XGBOOST RUL PURE (DENGAN HYPERPARAMETER TUNING) ===")
+    print("\n=== TRAINING MLP REGRESSOR RUL PURE (DENGAN HYPERPARAMETER TUNING) ===")
     df_labeled = df_labeled.sort_values(by='Tanggal Penggantian').reset_index(drop=True)
     split_idx = int(len(df_labeled) * 0.8)
     df_train = df_labeled.iloc[:split_idx].copy()
@@ -145,7 +144,7 @@ def main():
     kat_cols = ['Kategori', 'Sub Kategori', 'Tipe', 'Merek', 'Tingkat Kekritisan']
     
     mlflow.set_tracking_uri("sqlite:///mlflow.db")
-    mlflow.set_experiment("Maintenance_Predictor_RUL_Pure")
+    mlflow.set_experiment("Maintenance_Predictor_RUL_MLP")
     
     with mlflow.start_run():
         encoder = ce.TargetEncoder(cols=kat_cols, smoothing=10)
@@ -157,23 +156,26 @@ def main():
         X_test = df_test[fitur_x]
         y_test = df_test['Umur_Aset_Total_Hari']
         
-        base_xgb = XGBRegressor(objective='reg:absoluteerror', random_state=42)
+        # Neural Networks are sensitive to scale, so we use StandardScaler
+        scaler = StandardScaler()
+        X_train_scaled = scaler.fit_transform(X_train)
+        X_test_scaled = scaler.transform(X_test)
+        
+        base_mlp = MLPRegressor(random_state=42, early_stopping=True, max_iter=500)
         
         param_dist = {
-            'n_estimators': [50, 100, 200, 300],
-            'learning_rate': [0.01, 0.05, 0.1, 0.2],
-            'max_depth': [3, 4, 5, 7],
-            'subsample': [0.6, 0.8, 1.0],
-            'colsample_bytree': [0.6, 0.8, 1.0],
-            'reg_alpha': [0, 0.1, 0.5, 1.0],     
-            'reg_lambda': [0.1, 1.0, 5.0, 10.0]  
+            'hidden_layer_sizes': [(64, 32), (128, 64), (128, 64, 32), (64, 64)],
+            'activation': ['relu', 'tanh'],
+            'solver': ['adam'],
+            'alpha': [0.0001, 0.001, 0.01, 0.1],
+            'learning_rate_init': [0.001, 0.005, 0.01]
         }
         
-        print("Memulai proses Auto-Tuning RUL... Mohon tunggu.")
+        print("Memulai proses Auto-Tuning RUL dengan MLP Regressor... Mohon tunggu.")
         random_search = RandomizedSearchCV(
-            estimator=base_xgb,
+            estimator=base_mlp,
             param_distributions=param_dist,
-            n_iter=30,           
+            n_iter=20,           
             scoring='neg_mean_absolute_error',
             cv=5,                
             verbose=1,
@@ -181,13 +183,13 @@ def main():
             n_jobs=1
         )
         
-        random_search.fit(X_train, y_train)
+        random_search.fit(X_train_scaled, y_train)
         
-        best_xgb_model = random_search.best_estimator_
+        best_mlp_model = random_search.best_estimator_
         print("\n[Parameter Terbaik Ditemukan]:")
         print(random_search.best_params_)
         
-        y_pred_hari = best_xgb_model.predict(X_test)
+        y_pred_hari = best_mlp_model.predict(X_test_scaled)
         y_test_hari = y_test.values
         
         mae = mean_absolute_error(y_test_hari, y_pred_hari)
@@ -195,20 +197,21 @@ def main():
         mape = mean_absolute_percentage_error(y_test_hari, y_pred_hari)
         r2 = r2_score(y_test_hari, y_pred_hari)
         
-        print("\n=== HASIL EVALUASI REAL DATA (PURE RUL) ===")
+        print("\n=== HASIL EVALUASI REAL DATA (MLP RUL) ===")
         print(f"R-Squared (R2) : {r2:.4f}")
         print(f"MAE            : {mae:.2f} Hari")
         print(f"RMSE           : {rmse:.2f} Hari")
         print(f"MAPE           : {mape * 100:.2f}%")
         
         mlflow.log_params(random_search.best_params_)
-        mlflow.log_params({"model": "XGBRegressor_Pure_RUL", "target_filtering": True, "outlier_removal": "IQR"})
+        mlflow.log_params({"model": "MLPRegressor_Pure_RUL", "target_filtering": True, "outlier_removal": "IQR"})
         mlflow.log_metrics({"r2": r2, "mae": mae, "rmse": rmse, "mape": mape})
         
         os.makedirs('models', exist_ok=True)
-        model_pipeline = {'encoder': encoder, 'model': best_xgb_model, 'features': fitur_x}
-        joblib.dump(model_pipeline, 'models/maintenance_predictor_rul_pure.pkl')
-        print("\nModel pipeline PURE RUL berhasil di-save ke: models/maintenance_predictor_rul_pure.pkl")
+        # Save pipeline with scaler included
+        model_pipeline = {'encoder': encoder, 'scaler': scaler, 'model': best_mlp_model, 'features': fitur_x}
+        joblib.dump(model_pipeline, 'models/maintenance_predictor_rul_mlp.pkl')
+        print("\nModel pipeline MLP RUL berhasil di-save ke: models/maintenance_predictor_rul_mlp.pkl")
 
 if __name__ == '__main__':
     main()
