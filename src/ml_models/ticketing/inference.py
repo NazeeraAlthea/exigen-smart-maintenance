@@ -8,7 +8,7 @@ from ml_models.ticketing.utils import super_clean_text
 class ExigenInferenceEngine:
     def __init__(self):
         self.model_nlp_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../models/ticketing/ticket_v1.1.1_tfidf.pkl"))
-        self.whisper_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../models/whisper-large-v3"))
+        self.whisper_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../models/whisper-medium"))
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         
         # 1. Load Model NLP Tiket Pintar
@@ -18,8 +18,9 @@ class ExigenInferenceEngine:
             raise FileNotFoundError(f"⚠️ Model pkl tidak ditemukan di: {self.model_nlp_path}")
             
         # 2. Load Model Whisper Offline
-        path_model_lokal = download_model("large-v3", output_dir=self.whisper_dir)
-        self.model_stt = WhisperModel(path_model_lokal, device=self.device, compute_type="int8_float16")
+        path_model_lokal = download_model("medium", output_dir=self.whisper_dir)
+        compute_type = "int8_float16" if self.device == "cuda" else "int8"
+        self.model_stt = WhisperModel(path_model_lokal, device=self.device, compute_type=compute_type)
 
     def transkripsi_audio(self, audio_path: str) -> str:
         if not os.path.exists(audio_path):

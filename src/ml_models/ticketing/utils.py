@@ -26,11 +26,11 @@ if os.path.exists(PATH_KAMUS_ASET):
         kamus_aset_kustom = dict(zip(df_kamus_aset['slang'].str.lower(), df_kamus_aset['formal'].str.lower()))
         # Timpa/gabungkan ke kamus utama. Jika ada crash, kamus aset kustom yang menang
         SLANG_DICT.update(kamus_aset_kustom)
-        print(f"✅ Sukses memuat {len(kamus_aset_kustom)} aturan slang aset dari {PATH_KAMUS_ASET}")
+        print(f"[OK] Sukses memuat {len(kamus_aset_kustom)} aturan slang aset dari {PATH_KAMUS_ASET}")
     except Exception as e:
-        print(f"⚠️ Gagal membaca file kamus_slang_aset.csv lokal: {e}")
+        print(f"[WARN] Gagal membaca file kamus_slang_aset.csv lokal: {e}")
 else:
-    print(f"⚠️ File {PATH_KAMUS_ASET} tidak ditemukan. Deteksi imbuhan otomatis menggunakan fallback internet saja.")
+    print(f"[WARN] File {PATH_KAMUS_ASET} tidak ditemukan. Deteksi imbuhan otomatis menggunakan fallback internet saja.")
 
 
 # =====================================================================
