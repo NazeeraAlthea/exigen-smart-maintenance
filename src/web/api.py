@@ -88,13 +88,48 @@ async def transcribe_voice(file: UploadFile = File(...)):
 @app.post("/predict/rul", summary="Prediksi Remaining Useful Life (RUL) Aset (Legacy)")
 async def predict_asset_rul(payload: RULRequest):
     try:
-        from ml_models.maintenance_predictor.inference import predict_rul
+        from ml_models.maintenance_predictor_v2.inference import predict_rul
         rul = predict_rul(payload.features)
         return RULResponse(
             asset_id=payload.asset_id,
             predicted_rul_days=rul,
             status="Sukses"
         )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+# Batch RUL prediction models and endpoint
+class RULBatchItem(BaseModel):
+    asset_id: str
+    features: dict
+
+class RULBatchRequest(BaseModel):
+    batch: list[RULBatchItem]
+
+class RULBatchResponseItem(BaseModel):
+    asset_id: str
+    predicted_rul_days: float
+    status: str
+
+class RULBatchResponse(BaseModel):
+    results: list[RULBatchResponseItem]
+
+@app.post("/api/predict/rul/batch", summary="Prediksi Remaining Useful Life (RUL) Aset secara Batch")
+async def predict_asset_rul_batch(payload: RULBatchRequest):
+    try:
+        from ml_models.maintenance_predictor_v2.inference import predict_rul_batch
+        features_list = [item.features for item in payload.batch]
+        ruls = predict_rul_batch(features_list)
+        
+        results = [
+            RULBatchResponseItem(
+                asset_id=item.asset_id,
+                predicted_rul_days=rul,
+                status="Sukses"
+            )
+            for item, rul in zip(payload.batch, ruls)
+        ]
+        return RULBatchResponse(results=results)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
