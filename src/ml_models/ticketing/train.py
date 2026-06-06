@@ -18,9 +18,6 @@ from ml_models.ticketing.utils import super_clean_text
 import concurrent.futures
 import pandas as pd
 import numpy as np
-import dagshub
-import mlflow
-import mlflow.sklearn
 from tqdm import tqdm
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -28,6 +25,20 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.multioutput import MultiOutputClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import accuracy_score, classification_report
+import joblib
+
+try:
+    import dagshub
+    HAS_DAGSHUB = True
+except ImportError:
+    HAS_DAGSHUB = False
+
+try:
+    import mlflow
+    import mlflow.sklearn
+    HAS_MLFLOW = True
+except ImportError:
+    HAS_MLFLOW = False
 
 def proses_satu_baris(args):
     teks, label_asli = args
@@ -85,10 +96,19 @@ def run_training():
     X_test_clean = X_test_raw.apply(super_clean_text)
 
     # MLflow tracking
-    print("⏳ Menghubungkan ke DagsHub/MLflow...")
-    dagshub.init(repo_owner='NazeeraAlthea', repo_name='exigen-smart-maintenance', mlflow=True)
-    
-    with mlflow.start_run(run_name="Eksperimen_Ultimate_Regex_Bigram"):
+    use_mlflow = HAS_MLFLOW
+    if HAS_DAGSHUB:
+        try:
+            print("⏳ Menghubungkan ke DagsHub/MLflow...")
+            dagshub.init(repo_owner='NazeeraAlthea', repo_name='exigen-smart-maintenance', mlflow=True)
+        except Exception as e:
+            print(f"⚠️ Gagal menghubungkan ke DagsHub, menjalankan mode lokal: {e}")
+            use_mlflow = False
+    else:
+        print("ℹ️ Pustaka dagshub tidak terpasang, menjalankan mode lokal.")
+        use_mlflow = False
+
+    def train_model():
         print("🤖 Melatih Model Multi-Output Random Forest...")
         tfidf = TfidfVectorizer(max_features=3000, ngram_range=(1, 2), min_df=2, max_df=0.9)
         X_train_tfidf = tfidf.fit_transform(X_train_clean)
@@ -111,7 +131,11 @@ def run_training():
         
         # 1. Menghitung Exact Match Ratio
         exact_match = np.all(y_pred == y_test.values, axis=1).mean()
-        mlflow.log_metric("exact_match_ratio", exact_match)
+        if use_mlflow:
+            try:
+                mlflow.log_metric("exact_match_ratio", exact_match)
+            except Exception:
+                pass
         print(f"✅ Exact Match Ratio (Benar 6 Entitas Sekaligus): {exact_match:.4f}\n")
         
         # 2. Menghitung Evaluasi Rinci Tiap Label
@@ -122,7 +146,11 @@ def run_training():
             print("-" * 50)
             
             # Log akurasi individual per kolom ke MLflow
-            mlflow.log_metric(f"accuracy_{col}", acc_col)
+            if use_mlflow:
+                try:
+                    mlflow.log_metric(f"accuracy_{col}", acc_col)
+                except Exception:
+                    pass
         
         # 3. Tarik rute secara akurat ke folder models untuk penyimpanan hasil joblib
         model_save_dir = os.path.abspath(os.path.join(BASE_DIR, "../../../models/ticketing"))
@@ -130,20 +158,34 @@ def run_training():
         
         path_save_model = os.path.join(model_save_dir, "ticket_v1.1.1_tfidf.pkl")
         
-        import joblib
         joblib.dump(pipeline, path_save_model)
+        
         # =====================================================================
         # UPLOAD & REGISTRASI MODEL KE DAGSHUB MLFLOW
         # =====================================================================
-        print("☁️ Mengunggah model ke DagsHub MLflow Model Registry...")
-        mlflow.sklearn.log_model(
-            sk_model=pipeline, 
-            artifact_path="model_tfidf_rf",
-            registered_model_name="Exigen_Smart_Ticketing_Model" # <--- Ini yang membuatnya masuk ke tab 'Models' DagsHub
-        )
-        # =====================================================================
+        if use_mlflow:
+            try:
+                print("☁️ Mengunggah model ke DagsHub MLflow Model Registry...")
+                mlflow.sklearn.log_model(
+                    sk_model=pipeline, 
+                    artifact_path="model_tfidf_rf",
+                    registered_model_name="Exigen_Smart_Ticketing_Model"
+                )
+            except Exception as e:
+                print(f"⚠️ Gagal mengunggah ke Model Registry: {e}")
         
-        print(f"\n✅ Training selesai! Model disimpan di lokal ({path_save_model}) DAN di DagsHub Registry!")
+        print(f"\n✅ Training selesai! Model disimpan di lokal ({path_save_model})")
+
+    if use_mlflow:
+        try:
+            with mlflow.start_run(run_name="Eksperimen_Ultimate_Regex_Bigram"):
+                train_model()
+        except Exception as e:
+            print(f"⚠️ Gagal memulai mlflow run: {e}. Menjalankan training lokal...")
+            use_mlflow = False
+            train_model()
+    else:
+        train_model()
 
 if __name__ == "__main__":
     run_training()
