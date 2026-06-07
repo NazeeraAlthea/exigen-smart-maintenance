@@ -10,3 +10,9 @@ category_encoders
 fastapi==0.111.0
 uvicorn==0.30.1
 pydantic==2.7.4
+torch
+faster-whisper
+ctranslate2
+huggingface-hub
+tokenizers
+tqdm

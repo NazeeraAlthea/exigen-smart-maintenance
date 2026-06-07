@@ -5,17 +5,17 @@ import numpy as np
 
 # Load model secara global agar tidak reload per request
 # Menggunakan model MLP v2 bebas leak secara default
-MODEL_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../models/maintenance_predictor_v2_mlp.pkl"))
+MODEL_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../models/maintenance_predictor_v2_rf.pkl"))
 mlp_pipeline = None
 
 try:
     if os.path.exists(MODEL_PATH):
         mlp_pipeline = joblib.load(MODEL_PATH)
-        print("[INFO] MLP v2 RUL Model loaded successfully for inference.")
+        print("[INFO] RF v2 RUL Model loaded successfully for inference.")
     else:
         print(f"[WARN] Warning: {MODEL_PATH} not found. Using mock RUL prediction.")
 except Exception as e:
-    print(f"[ERROR] Error loading MLP Model: {e}. Using mock RUL prediction.")
+    print(f"[ERROR] Error loading RF Model: {e}. Using mock RUL prediction.")
 
 def predict_rul(features: dict) -> float:
     """
