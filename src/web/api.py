@@ -4,8 +4,16 @@ from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from pydantic import BaseModel
 import sys
 
-# Daftarkan folder ml_models ke path agar utils/inference bisa di-import
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../ml_models/ticketing")))
+# Daftarkan folder 'src' ke path agar import absolut ml_models bisa berjalan
+CURRENT_FILE_DIR = os.path.dirname(os.path.abspath(__file__))
+if os.path.basename(CURRENT_FILE_DIR) == "web":
+    SRC_DIR = os.path.abspath(os.path.join(CURRENT_FILE_DIR, ".."))
+else:
+    SRC_DIR = os.path.abspath(CURRENT_FILE_DIR)
+
+if SRC_DIR not in sys.path:
+    sys.path.insert(0, SRC_DIR)
+
 from ml_models.ticketing.inference import ExigenInferenceEngine
 
 app = FastAPI(
